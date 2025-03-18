@@ -39,3 +39,5 @@ Før vi går i gang med at kode vores Flappy Bird spil, skal vi lige gøre 2 tin
 Det første du selvfølgelig skal gøre, er at åbne VS Code.
 
 Når du gør det, så vil du sikkert se en form for velkomstskærm a la det her:
+
+<img width="1024" alt="Screenshot 2025-03-18 at 20 38 19" src="https://github.com/user-attachments/assets/00e8b66f-c51a-41d5-9185-6d380be611be" />
