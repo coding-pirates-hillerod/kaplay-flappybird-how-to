@@ -48,5 +48,6 @@ Fra denne (måske lidt overvældende) velkomstskærm er det eneste du behøver a
 
 Naviger herfra først dit Desktop.
 
+<img width="977" alt="Screenshot 2025-03-18 at 20 54 22" src="https://github.com/user-attachments/assets/f384c2f1-1a7d-4de0-954e-fd3e4e549da0" />
 
 
