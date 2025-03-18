@@ -27,7 +27,7 @@ Node.js kan ligeledes nemt hentes og installeres via dette link:
 
 - https://nodejs.org/en
 
-## Setup af VS Code og Node.js
+## Setup af VS Code og tjek af Node.js
 
 Før vi går i gang med at kode vores Flappy Bird spil, skal vi lige gøre 2 ting:
 
@@ -58,6 +58,6 @@ Tryk herefter på din nye "kaplay" mappe, så denne er markeret, og tryk dernæs
 
 <img width="977" alt="Screenshot 2025-03-18 at 21 06 13" src="https://github.com/user-attachments/assets/4306d7c3-7e73-467b-bd7a-e274c927e2fa" />
 
-
+Dette åbner "kaplay" mappen i VS Code, og alt hvad angår VS Code burde nu være på plads (hvis en "velkomstfane" endnu en gang vises efter du har åbnet mappen, så bare luk denne fane ved at trykke på det lille "x" til højre for teksten "_Welcome_" på fanen i midten af skærmen).
 
 
