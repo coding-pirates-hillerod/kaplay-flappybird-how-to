@@ -85,7 +85,17 @@ Skriv i terminalen følgende kommando (og tryk 'enter'):
 node -v
 ```
 
-Dette skulle gerne give dig et versionsnummer i terminalen på den udgave af Node.js du har installeret, og får du et output som følgende, så er alt godt.
+Dette skulle gerne give dig et versionsnummer i terminalen på den udgave af Node.js du har installeret, og får du et output som følgende, så er alt godt ifht. din Node.js installation.
 
 <img width="401" alt="Screenshot 2025-03-18 at 22 26 36" src="https://github.com/user-attachments/assets/11954df4-e3c9-404d-8b03-8c04e9373696" />
+
+På samme måde skal vi også lige tjekke, at den "package manager" som kommer med Node.js, og som hedder "npm", også er installeret korrekt.
+
+Skriv derfor følgende kommando i din terminal (og tryk 'enter'):
+
+```bash
+npm -v
+```
+
+Får du også her et versionsnummer outputtet i din terminal, så er alt ifht. npm også godt.
 
