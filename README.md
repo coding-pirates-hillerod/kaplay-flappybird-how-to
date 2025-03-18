@@ -19,6 +19,8 @@ VS Code er det man kalder et 'Integrated Development Environment' (hvilket ofte 
 
 - https://code.visualstudio.com/
 
+> _Lav evt. en Google eller YouTube søgning på "Mac install VS Code", hvis du har en Apple computer, eller på "Windows install VS Code", hvis du har en Windows computer, for hjælp til at installere VS Code._
+
 ### Node.js
 
 Node.js er noget man teknisk set kalder et 'JavaScript runtime environment', hvilket i sin enkelhed egentlig blot betyder, at vi kan skrive og køre koden til vores spil lokalt på vores computer i programmeringssproget kaldet <code>JavaScript</code>.
@@ -26,6 +28,8 @@ Node.js er noget man teknisk set kalder et 'JavaScript runtime environment', hvi
 Node.js kan ligeledes nemt hentes og installeres via dette link:
 
 - https://nodejs.org/en
+
+> _Lav evt. en Google eller YouTube søgning på "Mac install Node.js", hvis du har en Apple computer, eller på "Windows install Node.jd", hvis du har en Windows computer, for hjælp til at installere Node.js._
 
 ## Setup af VS Code og tjek af Node.js
 
@@ -42,11 +46,12 @@ Når du gør det, så vil du sikkert se en form for velkomstskærm a la det her:
 
 <img width="1024" alt="Screenshot 2025-03-18 at 20 38 19" src="https://github.com/user-attachments/assets/00e8b66f-c51a-41d5-9185-6d380be611be" />
 
+<br>
 Fra denne (måske lidt overvældende) velkomstskærm er det eneste du behøver at gøre, at trykke på den blå knap med teksten "Open Folder" ude i venstre side af skærmen, hvorved dit operativsystems stifinder åbnes.
 
 <img width="1092" alt="Screenshot 2025-03-18 at 20 49 20" src="https://github.com/user-attachments/assets/77a4d57e-faf1-4182-83ff-6851379a575f" />
 
-Naviger herfra først dit Desktop.
+Naviger herfra først til din "Desktop".
 
 <img width="977" alt="Screenshot 2025-03-18 at 20 54 22" src="https://github.com/user-attachments/assets/f384c2f1-1a7d-4de0-954e-fd3e4e549da0" />
 
