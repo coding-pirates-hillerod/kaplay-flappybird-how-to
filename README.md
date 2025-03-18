@@ -87,3 +87,5 @@ node -v
 
 Dette skulle gerne give dig et versionsnummer i terminalen på den udgave af Node.js du har installeret, og får du et output som følgende, så er alt godt.
 
+<img width="401" alt="Screenshot 2025-03-18 at 22 26 36" src="https://github.com/user-attachments/assets/11954df4-e3c9-404d-8b03-8c04e9373696" />
+
