@@ -46,5 +46,7 @@ Fra denne (måske lidt overvældende) velkomstskærm er det eneste du behøver a
 
 <img width="1092" alt="Screenshot 2025-03-18 at 20 49 20" src="https://github.com/user-attachments/assets/77a4d57e-faf1-4182-83ff-6851379a575f" />
 
+Naviger herfra først dit Desktop.
+
 
 
