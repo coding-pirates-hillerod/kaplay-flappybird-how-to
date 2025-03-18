@@ -99,3 +99,4 @@ npm -v
 
 Får du også her et versionsnummer outputtet i din terminal, så er alt ifht. npm også godt.
 
+<img width="416" alt="Screenshot 2025-03-18 at 22 34 09" src="https://github.com/user-attachments/assets/25b54e91-44d5-49d9-b07f-a451d9bc6ead" />
