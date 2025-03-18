@@ -54,5 +54,7 @@ Lav herfra en ny mappe på dit Desktop ved at trykke på knappen 'new folder' og
 
 <img width="977" alt="Screenshot 2025-03-18 at 21 01 36" src="https://github.com/user-attachments/assets/54c326af-8e1b-4e0f-9f07-98d3b9cccaf3" />
 
+Tryk herefter på din nye "kaplay" mappe, så denne er markeret, og tryk dernæst på knappen "Open".
+
 
 
