@@ -223,3 +223,6 @@ Marker nu alle 4 billeder i din "Downloads" mappe - tryk evt. først på "backgr
 
 Copy/paste eller træk nu alle 4 billeder fra din "Downloads" mappe over til din "sprites" mappe.
 
+<img width="1298" alt="Screenshot 2025-03-19 at 11 06 55" src="https://github.com/user-attachments/assets/74fbc641-1c44-47e6-ab49-79f420d925f6" />
+
+
