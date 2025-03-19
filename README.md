@@ -216,3 +216,6 @@ Gå nu tilbage til VS Code og højreklik først på "sprites" mappen under "publ
 Med dette skulle du nu gerne have 2 stifindervinduer åbne - ét for din "Downloads" mappe, og ét for din "sprites" mappe.
 
 <img width="1315" alt="Screenshot 2025-03-19 at 10 59 25" src="https://github.com/user-attachments/assets/ff890baa-160f-4d19-811f-02695fce2088" />
+
+Marker nu alle 4 billeder i din "Downloads" mappe - tryk evt. først på "background.png" billedet, hold "shift" tasten på dit keyboard inde, og tryk så 3 gange på piltasten der peger nedad på dit keyboard for at markere alle billeder.
+
