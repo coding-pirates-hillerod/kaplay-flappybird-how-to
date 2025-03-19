@@ -219,3 +219,4 @@ Med dette skulle du nu gerne have 2 stifindervinduer åbne - ét for din "Downlo
 
 Marker nu alle 4 billeder i din "Downloads" mappe - tryk evt. først på "background.png" billedet, hold "shift" tasten på dit keyboard inde, og tryk så 3 gange på piltasten der peger nedad på dit keyboard for at markere alle billeder.
 
+<img width="668" alt="Screenshot 2025-03-19 at 11 03 03" src="https://github.com/user-attachments/assets/c07b42b6-5c99-436a-9eb9-bb5bf16b569a" />
