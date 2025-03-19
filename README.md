@@ -171,3 +171,5 @@ Fold derfor evt. 'sprites' mappen ud, højreklik på 'bean.png' filen, og tryk p
 
 #### Download billeder til spillet
 
+Nu hvor vi har slettet de unødvendige ting til vores spil, så er det eneste vi mangler blot at downloade de billeder som findes under mappen "<code>img</code>" i dette repo.
+
