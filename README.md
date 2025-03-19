@@ -167,3 +167,4 @@ På samme skal du nu slette det 'bean.png' billede, som ligger under 'sprites' m
 
 Fold derfor evt. 'sprites' mappen ud, højreklik på 'bean.png' filen, og tryk på "Delete" i den fremkomne menu.
 
+<img width="838" alt="Screenshot 2025-03-19 at 09 26 15" src="https://github.com/user-attachments/assets/98401388-c282-4680-ae89-2e7e82f0ae3a" />
