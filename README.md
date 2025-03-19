@@ -233,9 +233,9 @@ Overordnet set vil kodningen af dit Flappy Bird spil strække sig over følgende
 
 1. Start udviklingsserveren
 2. Setup af kode til spil
-2. Kodning af "Main Menu" scene
-3. Kodning af "Game" scene
-4. Kodning af "Game Over" scene
+3. Kodning af "Main Menu" scene
+4. Kodning af "Game" scene
+5. Kodning af "Game Over" scene
 
 #### Start udviklingsserveren
 
@@ -268,3 +268,74 @@ Og den fil hvori vi gør det, er den "main.js" fil som ligger under mappen "src"
 Folder vi således "src" mappen ud, og dobbeltklikker på denne "main.js" fil, så åbnes den i VS Code.
 
 <img width="1159" alt="Screenshot 2025-03-19 at 14 10 22" src="https://github.com/user-attachments/assets/ef52d2cb-9f5e-4c95-8270-e423631203f0" />
+
+Og som det kan ses, så vil 'main.js' filen umiddelbart indeholde følgende kode, som er det er pt. vises i browseren:
+
+```javascript
+import kaplay from "kaplay";
+// import "kaplay/global"; // uncomment if you want to use without the k. prefix
+
+const k = kaplay();
+
+k.loadRoot("./"); // A good idea for Itch.io publishing later
+k.loadSprite("bean", "sprites/bean.png");
+
+k.add([k.pos(120, 80), k.sprite("bean")]);
+
+k.onClick(() => k.addKaboom(k.mousePos()));
+```
+
+Vi skal imidlertid ikke bruge det meste af denne kode, hvorfor du blot kan slette al koden i "main.js" filen, og erstatte den med følgende kode:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+```
+
+Med dette har vi nu det udgangspunkt vi skal bruge til at sætte vores spils kode op med KAPLAY, hvilket vi i "main.js" filen i følgende steps:
+
+1. Initialisere kaplay
+2. Loade sprites
+
+##### Initialisere kaplay
+
+Efter vores import af kaplay i "main.js" filen, så skal man i ethvert KAPLAY spil initialisere kaplay.
+
+Dette gøres umiddelbart ved at kalde metoden <code>kaplay()</code> lige under ens imports, således at koden nu er:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+kaplay();
+```
+
+Ifht. vores Flappy Bird spil vil vi dog give <code>kaplay()</code> metoden nogle specifikke instilliger, således at alt vil passe til det spil vi gerne vil lave.
+
+Og den måde vi gør det på er at give et JavaScript objekt (<code>{}</code>) med nogle <code>properties</code> og <code>values</code> inde mellem <code>kaplay()</code> metodens paranteser (de properties man kan bruge og sætte kan ses af KAPLAY dokumentationen [her](https://kaplayjs.com/doc/kaplay/)).
+
+I vores kode vil indstillinger være følgende, hvilke kort forklares i nedenstående:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+kaplay({
+  background: [0, 0, 0],
+  width: 500,
+  height: 580,
+  letterbox: true,
+});
+```
+
+###### background
+
+<code>background</code> propertien definerer, hvilken baggrundsfarve ens spil vil have. Til denne angiver vi her et JavaScript array (<code>[]</code>), hvori vi giver det 3 elementer af værdien nul (0). Disse 3 elementer repræsenterer hver en "RGB" farve/værdi (intervallet for hvert elements værdi er derfor mellem 0 og 255), og ved at sætte hvert element til nul, så vil dette give os en sort baggrundsfarve.
+
+###### width
+
+<code>width</code> propertien definerer bredden af vores spil, og grunden til at vi her sætter denne til 500 er, at det billede vi vil bruge til selve spillets baggrund ('background.png' i 'public/sprites/' mappen) netop også er 500 pixels bredt.
+
+###### height
+<code>height</code> propertien definerer højden på vores spil, og da vores spils baggrundsbillede også er 580 pixels højt, så sættes denne property også til 580.
+
