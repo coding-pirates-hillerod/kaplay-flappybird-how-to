@@ -202,3 +202,7 @@ Efter du har downloadet "background.png" billedet, så gentag denne proces for d
 Når du har downloadet alle 4 billeder, så skal vi lige have flyttet dem fra din computers "Downloads" mappe til dit spils "sprites" mappe (som findes under "public" mappen).
 
 Måden du nemmest gør dette på, er først at trykke på "Downloads" ikonet i din browser, og så føre din mus over et af de downloadede billeder, således at et mappeikon vises til højre for billedet.
+
+<img width="444" alt="Screenshot 2025-03-19 at 10 43 24" src="https://github.com/user-attachments/assets/341a4213-8531-4a24-b133-e6b14b47c724" />
+
+
