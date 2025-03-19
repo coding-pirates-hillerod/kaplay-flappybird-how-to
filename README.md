@@ -205,4 +205,4 @@ Måden du nemmest gør dette på, er først at trykke på "Downloads" ikonet i d
 
 <img width="444" alt="Screenshot 2025-03-19 at 10 43 24" src="https://github.com/user-attachments/assets/341a4213-8531-4a24-b133-e6b14b47c724" />
 
-
+Tryk nu på dette mappeikon til højre for downloaden af ét af billeder, hvorved din computers "Downloads" mappen åbnes.
