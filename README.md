@@ -185,3 +185,4 @@ Fra denne side skal du downloade hvert af de 4 billeder, hvilket her kun vises f
 
 Tryk derfor først på billedet med filnavnet "background.png", hvorved du vil få vist dette billede i din browser.
 
+<img width="1624" alt="Screenshot 2025-03-19 at 10 07 45" src="https://github.com/user-attachments/assets/cd2990e5-7b00-4d26-848a-aa6cb3b50dbc" />
