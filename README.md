@@ -131,3 +131,4 @@ cd flappybird
 
 Ved at have trykket 'enter', efter at have skrevet denne kommando, står vi nu nede i vores 'flappybird' mappe, hvorfor din terminal gerne skulle se (nogenlunde) ud som følger.
 
+<img width="977" alt="Screenshot 2025-03-19 at 08 26 58" src="https://github.com/user-attachments/assets/e902716d-6a20-4dde-bd7a-ed10eb82d691" />
