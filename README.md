@@ -249,3 +249,8 @@ npm run dev
 Når vi skriver denne kommando i vores terminal - og husker at trykke 'enter' bagefter - så vil terminalen umiddelbart vise os dette output.
 
 <img width="781" alt="Screenshot 2025-03-19 at 13 04 49" src="https://github.com/user-attachments/assets/8bd7b76d-0996-44ea-966a-71a8b4219897" />
+
+Og i dette output bliver vi via den blå tekst givet et link til <code>http://localhost:3001</code>, som når vi fører vores mus over linket vil vise os, hvordan vi åbner linket (på en Mac skal man holde "command" tasten inde og trykke på linket, mens man på en Windows maskine skal holde "Ctrl" tasten inde og trykke på linket).
+
+Trykker vi således på dette link, så åbnes følgende side i vores browser - der vil opdatere sig hver gang vi gemmer den kode vi skriver - og alt er nu godt ifht. at starte udviklingsserveren.
+
