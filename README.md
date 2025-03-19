@@ -193,3 +193,4 @@ Lige over selve billedet vil du kunne se en form for bjælke, hvor man ude til h
 
 Når du trykker på denne knap, så vil din browser downloade billedet, hvilket du kan se ved at trykke på "Downloads" ikonet i din browser (her er det vist for Chrome browseren, men dette burde næsten være ens for alle browsere).
 
+<img width="460" alt="Screenshot 2025-03-19 at 10 18 04" src="https://github.com/user-attachments/assets/d03aaadb-63c9-456f-ac34-a35644f973f1" />
