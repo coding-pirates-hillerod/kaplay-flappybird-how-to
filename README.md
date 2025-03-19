@@ -1,6 +1,6 @@
 # Kod dit eget 'Flappy Bird' spil med KAPLAY
 
-Dette repo gennemgår, hvordan man koder sit eget 'Flappy Bird' spil i VS Code fra start til slut med Node.js og spilbiblioteket KAPLAY.
+Dette repo gennemgår, hvordan man koder sit eget 'Flappy Bird' spil i VS Code fra start til slut med Node.js og spilbiblioteket [KAPLAY](https://kaplayjs.com/).
 
 Ved at følge denne 'how-to' guide vil du således ende ud med at have kodet dit helt eget Flappy Bird spil.
 
@@ -225,4 +225,26 @@ Copy/paste eller træk nu alle 4 billeder fra din "Downloads" mappe over til din
 
 <img width="1298" alt="Screenshot 2025-03-19 at 11 06 55" src="https://github.com/user-attachments/assets/74fbc641-1c44-47e6-ab49-79f420d925f6" />
 
+Og med det er alt nu på plads til at vi kan gå i gang med at kode vores helt eget Flappy Bird spil - Wuuhuuuu!!
+
+### Kod dit spil
+
+Overordnet set vil kodningen af dit Flappy Bird spil strække sig over følgende 4 steps, som gennemgås i nedenstående:
+
+1. Start udviklingsserveren
+2. Kod "Main Menu" scene
+3. Kod "Game" scene
+4. Kod "Game Over" scene
+
+#### Start udviklingsserveren
+
+For overhovedet at få vist et spil i sin browser, så er det første man gør, at starte den udviklingsserver som kommer med skabelonen, da vi tidligere kørte kommandoen "npx create-kaplay flappybird" i vores terminal.
+
+Og heldigvis er det super nemt at starte denne udviklingsserver, da vi blot fra vores terminal skal køre følgende kommando fra <code>flappybird</code> mappen:
+
+```bash
+npm run dev
+```
+
+Når vi skriver denne kommando i vores terminal - og husker at trykke 'enter' bagefter - så vil terminalen umiddelbart vise os dette output.
 
