@@ -265,4 +265,5 @@ Og den fil hvori vi gør det, er den "main.js" fil som ligger under mappen "src"
 
 <img width="781" alt="Screenshot 2025-03-19 at 14 06 09" src="https://github.com/user-attachments/assets/ac246669-e4da-40ef-8113-a4170fcda601" />
 
+Folder vi således "src" mappen ud, og dobbeltklikker på denne "main.js" fil, så åbnes den i VS Code.
 
