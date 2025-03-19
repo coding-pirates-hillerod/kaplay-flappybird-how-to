@@ -205,6 +205,8 @@ Måden du nemmest gør dette på, er først at trykke på "Downloads" ikonet i d
 
 <img width="444" alt="Screenshot 2025-03-19 at 10 43 24" src="https://github.com/user-attachments/assets/341a4213-8531-4a24-b133-e6b14b47c724" />
 
-Tryk nu på dette mappeikon til højre for downloaden af ét af billeder, hvorved din computers "Downloads" mappen åbnes.
+Tryk nu på dette mappeikon til højre for downloaden af ét af billeder, hvorved din computers "Downloads" mappe åbnes.
 
 <img width="1032" alt="Screenshot 2025-03-19 at 10 48 21" src="https://github.com/user-attachments/assets/9cf4864c-1271-4f07-b291-5c026e539025" />
+
+Gå nu tilbage til VS Code og højreklik først på "sprites" mappen under "public" mappen, og tryk dernæst på "Reveal in finder" fra dropdown listen, hvis du er på en Apple computer, eller på "Reveal in Explorer", hvis du er på en Windows computer.
