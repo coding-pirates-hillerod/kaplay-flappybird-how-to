@@ -210,3 +210,5 @@ Tryk nu på dette mappeikon til højre for downloaden af ét af billeder, hvorve
 <img width="1032" alt="Screenshot 2025-03-19 at 10 48 21" src="https://github.com/user-attachments/assets/9cf4864c-1271-4f07-b291-5c026e539025" />
 
 Gå nu tilbage til VS Code og højreklik først på "sprites" mappen under "public" mappen, og tryk dernæst på "Reveal in finder" fra dropdown listen, hvis du er på en Apple computer, eller på "Reveal in Explorer", hvis du er på en Windows computer.
+
+<img width="467" alt="Screenshot 2025-03-19 at 10 51 46" src="https://github.com/user-attachments/assets/91e128d3-2dc1-424b-a252-2bac88ef66db" />
