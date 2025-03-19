@@ -229,12 +229,13 @@ Og med det er alt nu på plads til at vi kan gå i gang med at kode vores helt e
 
 ### Kod dit spil
 
-Overordnet set vil kodningen af dit Flappy Bird spil strække sig over følgende 4 steps, som gennemgås i nedenstående:
+Overordnet set vil kodningen af dit Flappy Bird spil strække sig over følgende steps, som gennemgås i nedenstående:
 
 1. Start udviklingsserveren
-2. Kod "Main Menu" scene
-3. Kod "Game" scene
-4. Kod "Game Over" scene
+2. Setup af kode til spil
+2. Kodning af "Main Menu" scene
+3. Kodning af "Game" scene
+4. Kodning af "Game Over" scene
 
 #### Start udviklingsserveren
 
@@ -255,3 +256,10 @@ Og i dette output bliver vi via den blå tekst givet et link til <code>http://lo
 Trykker vi således på dette link, så åbnes følgende side i vores browser - der vil opdatere sig hver gang vi gemmer den kode vi skriver - og alt er nu godt ifht. at starte udviklingsserveren.
 
 <img width="928" alt="Screenshot 2025-03-19 at 13 17 19" src="https://github.com/user-attachments/assets/16dcb174-8857-4e7d-b04c-1401bafbaf2f" />
+
+#### Setup af kode til spil
+
+Nu hvor vores udviklingsserver kører, og vores umiddelbare spil vises i browseren, så skal vi nu til at starte med at sætte vort spil kode op.
+
+Og den fil hvori vi gør det, er den "main.js" fil som ligger under mappen "src".
+
