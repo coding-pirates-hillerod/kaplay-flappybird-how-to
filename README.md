@@ -186,3 +186,6 @@ Fra denne side skal du downloade hvert af de 4 billeder, hvilket her kun vises f
 Tryk derfor først på billedet med filnavnet "background.png", hvorved du vil få vist dette billede i din browser.
 
 <img width="1624" alt="Screenshot 2025-03-19 at 10 07 45" src="https://github.com/user-attachments/assets/cd2990e5-7b00-4d26-848a-aa6cb3b50dbc" />
+
+Lige over selve billedet vil du kunne se en form for bjælke, hvor man ude til højre kan finde en knap til at downloade billedet - når man fører sin mus over knappen vil den vise teksten "Download raw file" - hvilken du nu blot skal trykke på for at downloade billedet.
+
