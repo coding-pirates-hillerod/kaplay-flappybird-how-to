@@ -170,3 +170,8 @@ Fold derfor evt. 'sprites' mappen ud, højreklik på 'bean.png' filen, og tryk p
 <img width="838" alt="Screenshot 2025-03-19 at 09 26 15" src="https://github.com/user-attachments/assets/98401388-c282-4680-ae89-2e7e82f0ae3a" />
 
 #### Download billeder til spillet
+
+Nu hvor vi har slettet de unødvendige mapper og filer, så mangler vi blot at downloade de 4 billeder som ligger under "img" mappen i dette repo.
+
+Måden du gør det på er først at trykke på "img" mappen i browseren til dette repo.
+
