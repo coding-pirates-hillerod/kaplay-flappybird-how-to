@@ -263,3 +263,6 @@ Nu hvor vores udviklingsserver kører, og vores umiddelbare spil vises i browser
 
 Og den fil hvori vi gør det, er den "main.js" fil som ligger under mappen "src".
 
+<img width="781" alt="Screenshot 2025-03-19 at 14 06 09" src="https://github.com/user-attachments/assets/ac246669-e4da-40ef-8113-a4170fcda601" />
+
+
