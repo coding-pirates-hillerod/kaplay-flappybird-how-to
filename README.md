@@ -151,3 +151,4 @@ Og her er det første du skal gøre blot at trykke på den lille pil (<code>></c
 
 På samme måde skal du nu også folde mappen 'public' ud, således at din VS Code burde se sådan her ud:
 
+<img width="838" alt="Screenshot 2025-03-19 at 09 03 34" src="https://github.com/user-attachments/assets/f30e8821-f597-44a3-8b09-2725b5af72f2" />
