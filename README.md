@@ -175,3 +175,4 @@ Nu hvor vi har slettet de unødvendige mapper og filer, så mangler vi blot at d
 
 Måden du gør det på er først at trykke på "img" mappen i browseren til dette repo.
 
+<img width="1004" alt="Screenshot 2025-03-19 at 09 55 49" src="https://github.com/user-attachments/assets/a2d954d1-8b01-4bfe-a456-e58340694896" />
