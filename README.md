@@ -55,7 +55,7 @@ Naviger herfra først til din "Desktop".
 
 <img width="977" alt="Screenshot 2025-03-18 at 20 54 22" src="https://github.com/user-attachments/assets/f384c2f1-1a7d-4de0-954e-fd3e4e549da0" />
 
-Lav herfra en ny mappe på dit Desktop ved at trykke på knappen 'new folder' og kald denne nye mappe for "kaplay".
+Lav herfra en ny mappe på dit Desktop ved at trykke på knappen 'New Folder' og kald denne nye mappe for "kaplay".
 
 <img width="977" alt="Screenshot 2025-03-18 at 21 01 36" src="https://github.com/user-attachments/assets/54c326af-8e1b-4e0f-9f07-98d3b9cccaf3" />
 
@@ -103,10 +103,11 @@ Får du også her et versionsnummer outputtet i din terminal, så er alt ifht. n
 
 ## Kodning af Flappy Bird spil
 
-Nu hvor alt med VS Code og Node.js er på plads, så er det overordnet set følgende 2 ting vi skal gøre for at kode vores Flappy Bird spil med KAPLAY:
+Nu hvor alt med VS Code og Node.js er på plads, så er det overordnet set følgende steps vi skal gøre for at kode vores Flappy Bird spil med KAPLAY:
 
 1. Skabe en skabelon til vores spil
-2. Kode vores spil
+2. Downloade billeder til spillet
+3. Kode vores spil
 
 ### Skabelon til vores Flappy Bird spil
 
@@ -121,3 +122,12 @@ npx create-kaplay flappybird
 Når dette gøres, så skulle du gerne kunne se et output i din terminal lignende nedenstående, og at der ude til venstre i VS Code nu findes en mappe kaldet 'flappybird'.
 
 <img width="977" alt="Screenshot 2025-03-19 at 08 02 38" src="https://github.com/user-attachments/assets/d80e574c-5686-4799-8070-990bcd7cf6f8" />
+
+Eneste vi så i dette step mangler at gøre, er blot at navigere ned i denne nye 'flappybird' mappe, hvilket vi fra terminalen gør ved at køre denne kommando:
+
+```bash
+cd flappybird
+```
+
+Ved at have trykket 'enter', efter at have skrevet denne kommando, står vi nu nede i vores 'flappybird' mappe, hvorfor din terminal gerne skulle se (nogenlunde) ud som følger.
+
