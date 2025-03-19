@@ -145,3 +145,4 @@ I venstre side af VS Code kan vi som sagt nu se den 'flappybird' mappe, hvori vi
 
 Og her er det første du skal gøre blot at trykke på den lille pil (<code>></code>) til venstre for 'flappybird' mappen, hvorved du folder denne mappe ud, så du kan se dens indhold.
 
+<img width="977" alt="Screenshot 2025-03-19 at 08 57 41" src="https://github.com/user-attachments/assets/a17ac9ef-c634-47c4-8477-638bf03e3fd6" />
