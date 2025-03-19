@@ -248,3 +248,4 @@ npm run dev
 
 Når vi skriver denne kommando i vores terminal - og husker at trykke 'enter' bagefter - så vil terminalen umiddelbart vise os dette output.
 
+<img width="781" alt="Screenshot 2025-03-19 at 13 04 49" src="https://github.com/user-attachments/assets/8bd7b76d-0996-44ea-966a-71a8b4219897" />
