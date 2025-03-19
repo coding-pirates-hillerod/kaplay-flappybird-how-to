@@ -179,3 +179,4 @@ Måden du gør det på er først at trykke på "img" mappen i browseren til dett
 
 Ved at gøre det vil du blive ført til siden for "img" mappen, hvorfra vi kan downloade spillets 4 billeder.
 
+<img width="902" alt="Screenshot 2025-03-19 at 10 00 28" src="https://github.com/user-attachments/assets/d1e6eb7b-c6b8-4949-82ff-40203432c3d1" />
