@@ -189,3 +189,4 @@ Tryk derfor først på billedet med filnavnet "background.png", hvorved du vil f
 
 Lige over selve billedet vil du kunne se en form for bjælke, hvor man ude til højre kan finde en knap til at downloade billedet - når man fører sin mus over knappen vil den vise teksten "Download raw file" - hvilken du nu blot skal trykke på for at downloade billedet.
 
+<img width="902" alt="Screenshot 2025-03-19 at 10 13 11" src="https://github.com/user-attachments/assets/d4d2c29e-a201-4b17-8ffb-f8fce701b019" />
