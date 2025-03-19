@@ -159,3 +159,4 @@ Nu hvor du har foldet din 'public' mappe ud, så vil du kunne se en mappe herund
 
 Måden du gør det på i VS Code er ved først at højreklikke på 'examples' mappen, og fra den menu som fremkommer trykke på "Delete".
 
+<img width="838" alt="Screenshot 2025-03-19 at 09 07 13" src="https://github.com/user-attachments/assets/86725b45-2ac5-4d1d-a8ef-96a8ba232db3" />
