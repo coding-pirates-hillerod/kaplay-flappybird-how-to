@@ -132,3 +132,16 @@ cd flappybird
 Ved at have trykket 'enter', efter at have skrevet denne kommando, står vi nu nede i vores 'flappybird' mappe, hvorfor din terminal gerne skulle se (nogenlunde) ud som følger.
 
 <img width="977" alt="Screenshot 2025-03-19 at 08 26 58" src="https://github.com/user-attachments/assets/e902716d-6a20-4dde-bd7a-ed10eb82d691" />
+
+> _**Note**: Hvis du vil fjerne alt det "mærkelige" output i din terminal - så denne måske ser lidt mere overskuelig ud - så skriv "clear" i din terminal og tryk 'enter', hvis du er på en Apple computer, eller "cls" og tryk 'enter', hvis du er på en Windows computer._
+
+### Download billeder til spillet
+
+Inden vi downloader de billeder vi skal bruge til vores Flappy Bird spil, så skal vi lige gøre nedenstående ting, så alt er klart til den efterfølgende kodning af vores spil.
+
+#### Folde 'flappybird' mappen ud i VS Code
+
+I venstre side af VS Code kan vi som sagt nu se den 'flappybird' mappe, hvori vi senere vil skrive vores kode til Flappy Bird spillet.
+
+Og her er det første du skal gøre blot at trykke på den lille pil (<code>></code>) til venstre for 'flappybird' mappen, hvorved du folder denne mappe ud, så du kan se dens indhold.
+
