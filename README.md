@@ -120,3 +120,4 @@ npx create-kaplay flappybird
 
 Når dette gøres, så skulle du gerne kunne se et output i din terminal lignende nedenstående, og at der ude til venstre i VS Code nu findes en mappe kaldet 'flappybird'.
 
+<img width="977" alt="Screenshot 2025-03-19 at 08 02 38" src="https://github.com/user-attachments/assets/d80e574c-5686-4799-8070-990bcd7cf6f8" />
