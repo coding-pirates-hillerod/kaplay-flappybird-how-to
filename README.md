@@ -233,9 +233,10 @@ Overordnet set vil kodningen af dit Flappy Bird spil strække sig over følgende
 
 1. Start udviklingsserveren
 2. Setup af kode til spil
-3. Kodning af "Main Menu" scene
-4. Kodning af "Game" scene
-5. Kodning af "Game Over" scene
+3. Setup af spillets 'scener'
+4. Kodning af "Main Menu" scene
+5. Kodning af "Game" scene
+6. Kodning af "Game Over" scene
 
 #### Start udviklingsserveren
 
@@ -337,5 +338,41 @@ kaplay({
 <code>width</code> propertien definerer bredden af vores spil, og grunden til at vi her sætter denne til 500 er, at det billede vi vil bruge til selve spillets baggrund ('background.png' i 'public/sprites/' mappen) netop også er 500 pixels bredt.
 
 ###### height
+
 <code>height</code> propertien definerer højden på vores spil, og da vores spils baggrundsbillede også er 580 pixels højt, så sættes denne property også til 580.
 
+###### letterbox
+
+<code>letterbox</code> propertien bruges til at bevare billedformatet, hvis ændrer størrelsen på ens browservindue, og vil således efterlade sorte bjælker stå på de resterende mellemrum. Her sætter vi denne property en JavaScript boolean af værdien <code>true</code>, hvorved spillets billedformat bevares.
+
+##### Loade sprites
+
+Nu hvor vi har initialiseret kaplay, så mangler vi blot at loade vores billeder (hvilket man i KAPLAY kalder 'sprites') af spillets baggrund og selve 'flappy bird' fuglen, samt både top og bund af spillets rør.
+
+Generelt loader man disse sprites (dvs. billederne) ved at kalde <code>loadSprite()</code> metoden, og mellem metodens parenteser angive:
+
+1. Et navn til sin sprite
+2. Filstien under 'public' mappen til ens sprite/billede
+
+For vores 4 billeder vil dette være følgende i "main.js" filen:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+kaplay({
+  background: [0, 0, 0],
+  width: 500,
+  height: 580,
+  letterbox: true,
+});
+
+loadSprite("bg", "sprites/background.png");
+loadSprite("bird", "sprites/bird.png");
+loadSprite("toppipe", "sprites/toppipe.png");
+loadSprite("bottompipe", "sprites/bottompipe.png");
+```
+
+Og med det er du nu færdige med at sætte spillets startkode op, og kan nu fortsætte til næste step.
+
+#### Setup af spillets 'scener'
