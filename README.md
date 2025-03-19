@@ -215,3 +215,4 @@ Gå nu tilbage til VS Code og højreklik først på "sprites" mappen under "publ
 
 Med dette skulle du nu gerne have 2 stifindervinduer åbne - ét for din "Downloads" mappe, og ét for din "sprites" mappe.
 
+<img width="1315" alt="Screenshot 2025-03-19 at 10 59 25" src="https://github.com/user-attachments/assets/ff890baa-160f-4d19-811f-02695fce2088" />
