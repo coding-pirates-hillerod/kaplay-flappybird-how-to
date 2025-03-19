@@ -152,3 +152,10 @@ Og her er det første du skal gøre blot at trykke på den lille pil (<code>></c
 På samme måde skal du nu også folde mappen 'public' ud, således at din VS Code burde se sådan her ud:
 
 <img width="838" alt="Screenshot 2025-03-19 at 09 03 34" src="https://github.com/user-attachments/assets/f30e8821-f597-44a3-8b09-2725b5af72f2" />
+
+#### Slet 'examples' mappen
+
+Nu hvor du har foldet din 'public' mappe ud, så vil du kunne se en mappe herunder kaldet 'examples', hvilken vi nu vil slette, da denne mappe ikke skal bruges til noget.
+
+Måden du gør det på i VS Code er ved først at højreklikke på 'examples' mappen, og fra den menu som fremkommer trykke på "Delete".
+
