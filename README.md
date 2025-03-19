@@ -267,3 +267,4 @@ Og den fil hvori vi gør det, er den "main.js" fil som ligger under mappen "src"
 
 Folder vi således "src" mappen ud, og dobbeltklikker på denne "main.js" fil, så åbnes den i VS Code.
 
+<img width="1159" alt="Screenshot 2025-03-19 at 14 10 22" src="https://github.com/user-attachments/assets/ef52d2cb-9f5e-4c95-8270-e423631203f0" />
