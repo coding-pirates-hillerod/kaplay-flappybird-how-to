@@ -212,3 +212,6 @@ Tryk nu på dette mappeikon til højre for downloaden af ét af billeder, hvorve
 Gå nu tilbage til VS Code og højreklik først på "sprites" mappen under "public" mappen, og tryk dernæst på "Reveal in finder" fra dropdown listen, hvis du er på en Apple computer, eller på "Reveal in Explorer", hvis du er på en Windows computer.
 
 <img width="467" alt="Screenshot 2025-03-19 at 10 51 46" src="https://github.com/user-attachments/assets/91e128d3-2dc1-424b-a252-2bac88ef66db" />
+
+Med dette skulle du nu gerne have 2 stifindervinduer åbne - ét for din "Downloads" mappe, og ét for din "sprites" mappe.
+
