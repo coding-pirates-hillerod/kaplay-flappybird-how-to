@@ -376,3 +376,9 @@ loadSprite("bottompipe", "sprites/bottompipe.png");
 Og med det er du nu færdige med at sætte spillets startkode op, og kan nu fortsætte til næste step.
 
 #### Setup af spillets 'scener'
+
+Som det måske kunne ses i demoen af det færdige spil i starten af dette repo, så vil vores Flappy Bird spil indeholde følgende 3 forskellige "scener":
+
+1. En "Main Menu" scene
+2. En "Game" scene
+3. En "Game Over" scene
