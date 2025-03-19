@@ -100,3 +100,23 @@ npm -v
 Får du også her et versionsnummer outputtet i din terminal, så er alt ifht. npm også godt.
 
 <img width="416" alt="Screenshot 2025-03-18 at 22 34 09" src="https://github.com/user-attachments/assets/25b54e91-44d5-49d9-b07f-a451d9bc6ead" />
+
+## Kodning af Flappy Bird spil
+
+Nu hvor alt med VS Code og Node.js er på plads, så er det overordnet set følgende 2 ting vi skal gøre for at kode vores Flappy Bird spil med KAPLAY:
+
+1. Skabe en skabelon til vores spil
+2. Kode vores spil
+
+### Skabelon til vores Flappy Bird spil
+
+Via vores installation af Node.js kan vi gøre brug af noget som hedder en "package runner", der kaldes '<code>npx</code>', til nemt at skabe en form for skabelon til vores Flappy Bird spil.
+
+Skriv derfor følgende kommando i din terminal (og tryk 'enter'), hvilket vil skabe en mappe kaldet '<code>flappybird</code>' under din '<code>kaplay</code>' mappe:
+
+```bash
+npx create-kaplay flappybird
+```
+
+Når dette gøres, så skulle du gerne kunne se et output i din terminal lignende nedenstående, og at der ude til venstre i VS Code nu findes en mappe kaldet 'flappybird'.
+
