@@ -736,3 +736,4 @@ export default function mainMenuScene() {
 ###### anchor()
 Hvis du lige nu og her kigger på vores "Main Menu" i din browser, så vil du se, at vores netop tilføjede titel lader til at stå lidt forkert ..
 
+<img width="753" alt="Screenshot 2025-03-20 at 14 00 06" src="https://github.com/user-attachments/assets/88190202-dd1c-47c8-ac8c-d031d73a5e43" />
