@@ -615,7 +615,57 @@ Hvis du tjekker dit nuværende spil i din browser, så vil du for nu blot se en 
 
 <img width="753" alt="Screenshot 2025-03-20 at 11 53 04" src="https://github.com/user-attachments/assets/569f8a60-a235-4e5b-b25d-82bf2f6ee66b" />
 
-Men heldigvis er det som vores "Main Menu" scene gerne skal ende ud med at være lig følgende billede, hvor en spiller skal kunne trykke på sit keyboards <code>space</code> tast for dermed at gå i gang med at spille selve spillet.
+Men heldigvis skal vores "Main Menu" scene gerne ende ud med at være lig følgende billede, hvor en spiller skal kunne trykke på sit keyboards <code>space</code> tast for dermed at gå i gang med at spille selve spillet.
 
 <img width="753" alt="Screenshot 2025-03-20 at 11 59 49" src="https://github.com/user-attachments/assets/08747c48-7b01-42c4-9b5a-bdc23e9479b7" />
 
+Og for at nå dertil, vil processen for den kode vi vil skrive i vores "mainMenuScene.js" fil være følgende, som for hvert punkt gennemgås under nedenstående overskrifter:
+
+1. Tilføje et baggrundsbillede
+2. Lave en titel
+3. Lave en undertitel
+4. Tjekke for tryk på "space", og gå til næste scene
+
+##### Tilføje et baggrundsbillede
+
+Måden man som oftest tilføjer det man kalder "Game Objects" i KAPLAY - hvilket her vil være vores spils baggrundsbillede - er at bruge KAPLAY's <code>add()</code> metode inde mellem "tuborgklammerne" (<code>{}</code>) i en scenes funktion.
+
+Så for at vi kan tilføje vores baggrundsbillede til vores "Main Menu" scene, så åbn først din "mainMenuScene.js" fil ved dobbeltklikke på den i VS Code.
+
+Når den åbnes i din editor skulle den kode vi tidligere skrev gerne være følgende:
+
+```javascript
+export default function mainMenuScene() {}
+```
+
+Og for nu at tilføje vores baggrundsbillede, så definerer vi først en JavaScript variabel kaldet "bg" inde mellem <code>mainMenuScene</code> funktionens "tuborgklammer", og sætter den lig med <code>add()</code> metoden. Altå sådan her:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add();
+}
+```
+
+Dette vil i sig selv dog ikke få vores baggrundsbilledet vist på skærmen, da man inde mellem <code>add()</code> metodens parenteser (<code>()</code>) skal give hvert "Game Obejct" nogle "Components" inde i et Javascript array (<code>[]</code>), som er det der vil definerer en specifik adfærd for et "Game Object".
+
+Så inde mellem <code>add()</code> metodens parenteser giver vi altså først blot metoden et tomt JavaScript array sådan her:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([]);
+}
+```
+
+For vores baggrundsbillede er den eneste "Component" vi heldigvis blot skal give inde mellem "klammerne" (dvs. inde mellem <code>[]</code>) for at få billedet vist, et kald til KAPLAY metoden <code>sprite()</code>, hvortil vi bare skal give navnet på den sprite vi tidligere loaded i vores "main.js" fil.
+
+Og tidligere gav vi jo vores loaded baggrundsbillede navnet "bg", hvorfor vi så blot kan skrive dette navn inde mellem <code>sprite()</code> metodens parenteser for at få baggrundsbilledet vist på skærmen.
+
+Koden i "mainMenuScene.js" filen vil altså derfor blive:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+}
+```
+
+Ved at have tilføjet vores baggrundsbillede, så skulle skærmen til din nuværende "Main Menu" scene gerne se sådan her ud:
