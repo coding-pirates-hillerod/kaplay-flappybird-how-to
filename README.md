@@ -611,8 +611,10 @@ Og .. "HELL YEAH!" vi har nu sat alle vores scener op, og kan derfor (endelig..)
 
 #### Kodning af "Main Menu" scene
 
-Hvis du tjekker dit nuværende spil i din browser, så vil du for nu blot se en kedelig sort skærm (hvilket jo er knap så spændende ..).
+Hvis du tjekker dit nuværende spil i din browser, så vil du for nu blot se en kedelig sort skærm ..
 
 <img width="753" alt="Screenshot 2025-03-20 at 11 53 04" src="https://github.com/user-attachments/assets/569f8a60-a235-4e5b-b25d-82bf2f6ee66b" />
+
+Men heldigvis er det som vores "Main Menu" scene gerne skal ende ud med at være lig følgende billede, hvor en spiller skal kunne trykke på sit keyboards <code>space</code> tast for dermed at gå i gang med at spille selve spillet.
 
 
