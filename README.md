@@ -828,3 +828,4 @@ export default function mainMenuScene() {
 
 Så hvis man nu først står i vores "Main Menu" scene i ens browser, deri trykker på ens "space" tast, så føres man altså nu videre til "Game" scene, hvor vi som det næste skal kode selve Flappy Bird spillet.
 
+<img width="1496" alt="Screenshot 2025-03-20 at 19 45 54" src="https://github.com/user-attachments/assets/1d905a30-65c7-41b7-bbdf-a21ff23d0d02" />
