@@ -622,8 +622,8 @@ Men heldigvis skal vores "Main Menu" scene gerne ende ud med at være lig følge
 Og for at nå dertil, vil processen for den kode vi vil skrive i vores "mainMenuScene.js" fil være følgende, som for hvert punkt gennemgås under nedenstående overskrifter:
 
 1. Tilføje et baggrundsbillede
-2. Lave en titel
-3. Lave en undertitel
+2. Tilføje en titel
+3. Tilføje en undertitel
 4. Tjekke for tryk på "space", og gå til næste scene
 
 ##### Tilføje et baggrundsbillede
@@ -671,3 +671,68 @@ export default function mainMenuScene() {
 Ved at have tilføjet vores baggrundsbillede, så skulle skærmen til din nuværende "Main Menu" scene gerne se sådan her ud:
 
 <img width="753" alt="Screenshot 2025-03-20 at 12 41 47" src="https://github.com/user-attachments/assets/94dca8b9-3d6a-42aa-a13c-59f1973f603a" />
+
+##### Tilføje en titel
+
+Måden vi vi tilføje titlen "Flappy Bird" til vores "Main Menu" scene, er stort set den samme som for det netop tilføjede baggrundsbillede.
+
+Under variablen for vores baggrundsbillede (dvs. under linjen starten med <code>const bg = ..</code>) vil vi således også definere en konstant variabel kaldet "title", som vi ligeledes først sætter lig med <code>add()</code> metoden, og inde mellem denne metodes parenteser giver det et tomt array (<code>[]</code>).
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([]);
+}
+```
+
+For vores "title" variabel og "Game Object" vil vi imidlertid give følgende "Components" inde mellem "klammerne" (<code>[]</code>) i <code>add([])</code> metoden:
+
+- text()
+- pos()
+- anchor()
+
+###### text()
+
+Komponenten <code>text()</code> bruges helt generelt til at vise tekst på skærmen.
+
+Så for at vise titlen "Flappy Bird" skal vi derfor først blot skrive dette inde mellem <code>text()</code> komponentens parenteser.
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([text("Flappy Bird")]);
+}
+```
+
+###### pos()
+
+<code>pos()</code> komponenten bruges til at placere "Game Objects" på skærmen via <code>x</code> og <code>y</code> koordinater - ligesom du kender det fra et almindeligt koordinatsystem.
+
+For spil der vises på en skærm gælder der imidlertid følgende:
+
+- <code>Origi</code> (dvs. positon (0, 0), hvor både x og y er nul) starter helt oppe i venstre hjørne af din skærm
+
+- <code>x-aksen</code> går fra din skærms øverste venstre hjørne helt indtil sammes øverste højre hjørne (så jo større x er, jo længere til højre på skærmen vil et "Game Obejct" placeres)
+
+- <code>y-aksen</code> går fra din skærms øverste venstre hjørne og helt ned til sammes nederste venstre hjørne (så jo større y er, jo længere ned på skærmen vil et "Game Obejct" placeres)
+
+For vores "Flappy Bird" titel vil vi gerne have, at denne vises centret på x-eksen, og lidt oppe over y-aksens centrum, hvilket vi dog heldigvis nemt kan bruge KAPLAY's <code>center()</code> metode til at hjælpe os med.
+
+Derfor vil vi som første parameter til <code>pos()</code> komponenten give dene et kald til <code>center().x</code>, hvilket vil centrere titlen i midten af skærmen på x-aksen.
+
+Som anden parameter til <code>pos()</code> komponenten vil vi den et kald på <code>center()</code> metoden y-akse, og herfra fratrække 100 pixels, således at titlen ender med at stå lidt højere oppe på skærmen.
+
+Helt konkret vil koden til <code>pos()</code> komponenten altså være:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([text("Flappy Bird"), pos(center().x, center().y - 100)]);
+}
+```
+
+> _Læg i øvrigt mærke til, at der mellem hver komponent **SKAL** være et komma!!_
+
+###### anchor()
+Hvis du lige nu og her kigger på vores "Main Menu" i din browser, så vil du se, at vores netop tilføjede titel lader til at stå lidt forkert ..
+
