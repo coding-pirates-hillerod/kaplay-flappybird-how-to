@@ -617,4 +617,5 @@ Hvis du tjekker dit nuværende spil i din browser, så vil du for nu blot se en 
 
 Men heldigvis er det som vores "Main Menu" scene gerne skal ende ud med at være lig følgende billede, hvor en spiller skal kunne trykke på sit keyboards <code>space</code> tast for dermed at gå i gang med at spille selve spillet.
 
+<img width="753" alt="Screenshot 2025-03-20 at 11 59 49" src="https://github.com/user-attachments/assets/08747c48-7b01-42c4-9b5a-bdc23e9479b7" />
 
