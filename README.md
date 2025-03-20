@@ -408,3 +408,8 @@ For at skabe vores "Main Menu" scene - som senere bliver en scene hvor en spille
 Højreklik først på "scenes" mappen, og tryk på "New File" i den fremkomne menu.
 
 <img width="851" alt="Screenshot 2025-03-20 at 08 40 29" src="https://github.com/user-attachments/assets/da7e3b4c-e89d-46a5-afcd-901a5364655f" />
+
+Når vi trykker på "New File", så vil der i venstre side af VS Code, under vores "scenes" mappe, nu skabes en ny fil med tomt filnavn, hvilket vi erstatter med filnavnet "mainMenuScene.js" og trykker 'enter'.
+
+
+
