@@ -388,6 +388,7 @@ I det følgende vil vi derfor umiddelbart sætte disse 3 scener til spillet op, 
 Inden vi gør det, så vil vi dog lige lave en mappe til vores scener - som vi vil kalde "scenes" og ligger under "src" mappen - således at vores kode er bedre struktureret og dermed nemmere at forstå (også for os selv 😅).
 
 ##### "scenes" mappe til vores scener
+
 For at lave en "scenes" mappe skal vi blot gøre følgende i VS code.
 
 Højreklik først på "src" mappen, og tryk derefter på "New Folder" i popup-menuen.
@@ -401,6 +402,7 @@ Med det vil der under "src" mappen dukker en ny mappe op under denne, i hvilken 
 Alt er nu klart til at vi kan gå i gang med skabe de 3 scener i denne nye "scenes" mappe.
 
 ##### Main Menu scenen
+
 Måden vi vil skabe vores umiddelbare scener til spillet er ret simple (og processen den samme for alle 3 scener).
 
 For at skabe vores "Main Menu" scene - som senere bliver en scene hvor en spiller kan trykke på <code>space</code> på sit keyboard og dermed starte selve spillet - gør vi følgende.
@@ -415,21 +417,102 @@ Når vi trykker på "New File", så vil der i venstre side af VS Code, under vor
 
 Nu hvor vi har filen til vores "Main Menu" scene (som i øvrigt også er en <code>JavaScript</code> fil), og denne jo automatisk er åbnet i vores editor, så kan vi begynde at skrive en form for generel kode til denne scene.
 
-Og måden vi her vil skabe denne scene er overordnet set at skrive en generel JavaScript <code>funktion</code>, som vi derefter kan importere i vores "main.js" fil og bruge i KAPLAY's <code>scene()</code>.
+Og måden vi her vil skabe denne scene er overordnet set at skrive en generel JavaScript <code>funktion</code>, som vi derefter kan importere i vores "main.js" fil og bruge i en KAPLAY metode kaldet <code>scene()</code>.
 
 Helt konkret er koden følgende (hvis elementer kort forklares herunder):
 
 ```javascript
-export default function mainMenuScene() {
-    
-}
+export default function mainMenuScene() {}
 ```
 
 ###### export default
-<code>export default</code> i koden er det man i JavaScript kalder nogle <code>keywords</code> som gør, at vi om lidt kan importere hele filens kode i vores "main.js" fil.
+
+<code>export default</code> i koden er det man i JavaScript kalder nogle <code>keywords</code> som gør, at vi her vil eksportere vores funktion, således at vi om lidt kan importere hele filens kode i vores "main.js" fil.
 
 ###### function
+
 <code>function</code> er ligeledes et JavaScript <code>keyword</code> som man bruger til at definere en funktion - en funktion er overordnet set noget kode, som man kan bruge igen og igen i sin kode.
 
 ###### mainMenuScene() {}
+
 <code>mainMenuScene</code> er som sådan blot det navn vi giver vores funktion (vi kunne i princippet have kaldt vores funktion hvad som helst), mens parenteserne (<code>()</code>) kan bruges til at give ens funktion nogle parametre (hvilket vi **ikke** gør her), og "tuborgklammerne" (<code>{}</code>) bruges til at skrive sin funktions kode mellem disse.
+
+Med dette skrevet, kan nu importere koden i "mainMenuScene.js" i vores "main.js".
+
+Åbn derfor din "main.js" fil, og start med at importer din "mainMenuScene" funktion på denne måde under dine 2 imports af kaplay i toppen af filen (enkeltdelene denne import forklares kort under koden).
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import mainMenuScene from "./scenes/mainMenuScene";
+
+kaplay({
+  background: [0, 0, 0],
+  width: 500,
+  height: 580,
+  letterbox: true,
+});
+
+loadSprite("bg", "sprites/background.png");
+loadSprite("bird", "sprites/bird.png");
+loadSprite("toppipe", "sprites/toppipe.png");
+loadSprite("bottompipe", "sprites/bottompipe.png");
+```
+
+###### import
+
+<code>import</code> er også et JavaScript keyword som angiver, at man vil importere noget kode fra en anden fil.
+
+###### mainMenuScene
+
+<code>mainMenuScene</code> er det vi vil importere fra en anden fil. Og her er det jo helt konkret den <code>mainMenuScene</code> funktion vi definerede i vores "mainMenuScene.js" fil for lidt siden.
+
+###### from
+
+<code>from</code> er også et JavaScript keyword som blot skal bruge til at fortælle, fra hvilken fil vi vil importere kode ind i vores "main.js" fil.
+
+###### "./scenes/mainMenuScene"
+
+<code>"./scenes/mainMenuScene"</code> er blot den filsti, hvorfra koden til vores import findes.
+
+Med alt dette kan vi nu bruge KAPLAY's <code>scene()</code> metode til at sætte vores spil op til at bruge importen af vores "mainMenuScene" som startskuddet for vores spil.
+
+Og måden man gør det på er sådan set bare, at angive 2 parametre mellem <code>scene()</code> metodens parenteser, som er:
+
+1. Det navn man vil bruge til sin scene
+2. Den funktion der skal eksekeveres, når scenen bruges
+
+Til vores kodes vil <code>scene()</code> metodens navn være <code>"main-menu"</code>, og funktionen være den <code>mainMenuScene</code> import vi lavede for lidt siden.
+
+Til slut i vores "main.js" fil skriver vi derfor følgende for at sætte vores "Main Menu" scene op:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import mainMenuScene from "./scenes/mainMenuScene";
+
+kaplay({
+  background: [0, 0, 0],
+  width: 500,
+  height: 580,
+  letterbox: true,
+});
+
+loadSprite("bg", "sprites/background.png");
+loadSprite("bird", "sprites/bird.png");
+loadSprite("toppipe", "sprites/toppipe.png");
+loadSprite("bottompipe", "sprites/bottompipe.png");
+
+scene("main-menu", mainMenuScene);
+```
+
+Og med det er vi nu klar til at sætte de 2 andre scener (dvs. "Game" og "Game Over" scenerne) op på samme måde som vi lige har gjort her med "Main Menu" scenen.
+
+##### Game scenen
+
+Som sagt vil vores næste scene, dvs. "Game" scenen hvori selve Flappy Bird spillet vil spilles, skabes på samme måde som i foregående. Gør derfor følgende:
+
+Lav en ny fil kaldet "gameScene.js" under din "scenes" mappe.
+
