@@ -669,3 +669,5 @@ export default function mainMenuScene() {
 ```
 
 Ved at have tilføjet vores baggrundsbillede, så skulle skærmen til din nuværende "Main Menu" scene gerne se sådan her ud:
+
+<img width="753" alt="Screenshot 2025-03-20 at 12 41 47" src="https://github.com/user-attachments/assets/94dca8b9-3d6a-42aa-a13c-59f1973f603a" />
