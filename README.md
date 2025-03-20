@@ -6,7 +6,7 @@ Ved at følge denne 'how-to' guide vil du således ende ud med at have kodet dit
 
 ## Nødvendigt software
 
-For at kunne kode spillet, skal du dog først og fremmest have følgende software installeret:
+For at kunne kode spillet, skal du først og fremmest have følgende software installeret:
 
 1. [VS Code](https://code.visualstudio.com/)
 2. [Node.js](https://nodejs.org/en)
@@ -55,7 +55,7 @@ Naviger herfra først til din "Desktop".
 
 <img width="977" alt="Screenshot 2025-03-18 at 20 54 22" src="https://github.com/user-attachments/assets/f384c2f1-1a7d-4de0-954e-fd3e4e549da0" />
 
-Lav herfra en ny mappe på dit Desktop ved at trykke på knappen 'New Folder' og kald denne nye mappe for "kaplay".
+Lav her en ny mappe på dit Desktop ved at trykke på knappen 'New Folder' og kald denne nye mappe for "kaplay".
 
 <img width="977" alt="Screenshot 2025-03-18 at 21 01 36" src="https://github.com/user-attachments/assets/54c326af-8e1b-4e0f-9f07-98d3b9cccaf3" />
 
@@ -103,7 +103,7 @@ Får du også her et versionsnummer outputtet i din terminal, så er alt ifht. n
 
 ## Kodning af Flappy Bird spil
 
-Nu hvor alt med VS Code og Node.js er på plads, så er det overordnet set følgende steps vi skal gøre for at kode vores Flappy Bird spil med KAPLAY:
+Nu hvor alt med VS Code og Node.js er på plads, så er det overordnet set følgende steps vi skal følge for at kode vores Flappy Bird spil med KAPLAY:
 
 1. Skabe en skabelon til vores spil
 2. Downloade billeder til spillet
@@ -270,7 +270,7 @@ Folder vi således "src" mappen ud, og dobbeltklikker på denne "main.js" fil, s
 
 <img width="1159" alt="Screenshot 2025-03-19 at 14 10 22" src="https://github.com/user-attachments/assets/ef52d2cb-9f5e-4c95-8270-e423631203f0" />
 
-Og som det kan ses, så vil 'main.js' filen umiddelbart indeholde følgende kode, som er det er pt. vises i browseren:
+Og som det kan ses, så vil 'main.js' filen umiddelbart indeholde følgende kode, som er det der pt. vises i browseren:
 
 ```javascript
 import kaplay from "kaplay";
@@ -315,7 +315,7 @@ Ifht. vores Flappy Bird spil vil vi dog give <code>kaplay()</code> metoden nogle
 
 Og den måde vi gør det på er at give et JavaScript objekt (<code>{}</code>) med nogle <code>properties</code> og <code>values</code> inde mellem <code>kaplay()</code> metodens paranteser (de properties man kan bruge og sætte kan ses af KAPLAY dokumentationen [her](https://kaplayjs.com/doc/kaplay/)).
 
-I vores kode vil indstillinger være følgende, hvilke kort forklares i nedenstående:
+I vores kode vil indstillingerne være følgende, hvilke kort forklares i nedenstående:
 
 ```javascript
 import kaplay from "kaplay";
@@ -343,7 +343,7 @@ kaplay({
 
 ###### letterbox
 
-<code>letterbox</code> propertien bruges til at bevare billedformatet, hvis ændrer størrelsen på ens browservindue, og vil således efterlade sorte bjælker stå på de resterende mellemrum. Her sætter vi denne property en JavaScript boolean af værdien <code>true</code>, hvorved spillets billedformat bevares.
+<code>letterbox</code> propertien bruges til at bevare billedformatet, hvis man ændrer størrelsen på ens browservindue, og vil således efterlade sorte bjælker stå på de resterende mellemrum. Her sætter vi denne property til en JavaScript boolean af værdien <code>true</code>, hvorved spillets billedformat bevares.
 
 ##### Loade sprites
 
@@ -382,3 +382,15 @@ Som det måske kunne ses i demoen af det færdige spil i starten af dette repo, 
 1. En "Main Menu" scene
 2. En "Game" scene
 3. En "Game Over" scene
+
+I det følgende vil vi derfor umiddelbart sætte disse 3 scener til spillet op, så at vi bagefter kan skrive koden i hver af dem for at få spillet til at virke.
+
+Inden vi gør det, så vil vi dog lige lave en mappe til vores scener - som vi vil kalde "scenes" og ligger den under "src" mappen - således at vores kode er bedre struktureret og dermed nemmere at forstå (også for os selv 😅).
+
+##### "scenes" mappe
+For at lave en "scenes" skal vi blot gøre følgende i VS code.
+
+Højreklik først på "src" mappen, og tryk derefter på "New Folder" i popup-menuen.
+
+
+##### Main Menu scenen
