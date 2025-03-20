@@ -411,7 +411,7 @@ Højreklik først på "scenes" mappen, og tryk på "New File" i den fremkomne me
 
 Når vi trykker på "New File", så vil der i venstre side af VS Code, under vores "scenes" mappe, nu skabes en ny fil med tomt filnavn, hvilket vi erstatter med filnavnet "mainMenuScene.js" og trykker 'enter', hvormed denne fil automatisk åbnes i VS Codes editor.
 
-
+<img width="851" alt="Screenshot 2025-03-20 at 09 35 47" src="https://github.com/user-attachments/assets/c6148167-7dc0-4132-800f-50e10699ec3e" />
 
 
 
