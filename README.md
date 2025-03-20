@@ -394,5 +394,8 @@ Højreklik først på "src" mappen, og tryk derefter på "New Folder" i popup-me
 
 <img width="851" alt="Screenshot 2025-03-20 at 07 49 38" src="https://github.com/user-attachments/assets/668da908-b78b-47df-9b62-35e7630f2545" />
 
+Med det vil der under "src" mappen dukker en ny mappe op under denne, i hvilken vi skriver "scenes" (og trykker 'enter' for navngive mappen dette navn).
+
+
 
 ##### Main Menu scenen
