@@ -548,3 +548,61 @@ For "Game Over" scenen er processen den samme. Altså:
 Skab en ny fil kaldet "gameOverScene.js" i din "scenes" mappe.
 
 <img width="973" alt="Screenshot 2025-03-20 at 11 29 29" src="https://github.com/user-attachments/assets/6147d126-9350-4273-ad3f-c155166c4ac0" />
+
+Eksporter en funktion kaldet "gameOverScene" i din nye "gameOverScene.js" fil. Koden er:
+
+```javascript
+export default function gameOverScene() {}
+```
+
+Importer denne funktion i "main.js" lige under de 2 foregående imports, dvs.:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import mainMenuScene from "./scenes/mainMenuScene";
+import gameScene from "./scenes/gameScene";
+import gameOverScene from "./scenes/gameOverScene";
+```
+
+Lav til allersidt i "main.js" en ny <code>scene()</code>, giv den navnet "game-over" og en reference til importen af din "gameOverScene" funktion.
+
+```javascript
+scene("main-menu", mainMenuScene);
+scene("game", gameScene);
+scene("game-over", gameOverScene);
+```
+
+Med alt dette mangler vi nu kun at kode en enkelt lille bitte ting for at få vores spil til at starte med at vise vores "Main Menu" scene som det første i spillet.
+
+Måden vi får vores til at starte med at vise "Main Menu" scenen er ved at gøre brug af KAPLAY metoden <code>go()</code>, hvori vi blot skal skrive navnet på den scene vi vil have vist.
+
+Så da vi først gerne vil have vores "main-menu" scene vist, så skriver vi blot <code>go("main-menu")</code> til allersidst i vores "main.js" fil, hvorved hele dennes kode gerne skulle være følgende:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import mainMenuScene from "./scenes/mainMenuScene";
+import gameScene from "./scenes/gameScene";
+import gameOverScene from "./scenes/gameOverScene";
+
+kaplay({
+  background: [0, 0, 0],
+  width: 500,
+  height: 580,
+  letterbox: true,
+});
+
+loadSprite("bg", "sprites/background.png");
+loadSprite("bird", "sprites/bird.png");
+loadSprite("toppipe", "sprites/toppipe.png");
+loadSprite("bottompipe", "sprites/bottompipe.png");
+
+scene("main-menu", mainMenuScene);
+scene("game", gameScene);
+scene("game-over", gameOverScene);
+
+go("main-menu");
+```
