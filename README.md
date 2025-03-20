@@ -829,3 +829,67 @@ export default function mainMenuScene() {
 Så hvis man nu først står i vores "Main Menu" scene i ens browser, deri trykker på ens "space" tast, så føres man altså nu videre til "Game" scene, hvor vi som det næste skal kode selve Flappy Bird spillet.
 
 <img width="1496" alt="Screenshot 2025-03-20 at 19 45 54" src="https://github.com/user-attachments/assets/1d905a30-65c7-41b7-bbdf-a21ff23d0d02" />
+
+#### Kodning af "Game" scene
+Huuurraahhh .. endelig er vi nået til at skulle kode selve vores Flappy Bird spil!
+
+Og i den forbindelse vil processen for vores kodning af selv spillet overordnet set være følgende:
+
+1. Definere en 'tyngdekraft' for spillet
+2. Tilføje vores baggrundsbillede
+3. Tilføje vores Flappy bird
+4. Tilføje spillets ('top' og 'bottom') rør
+
+##### Definere en 'tyngdekraft' for spillet
+Da et Flappy Bird spil jo primært handler om at en fugl konstant bliver trukket nedad af tyngdekraften, og kun ved tryk på en tast flyver opad indtil tyngdekraften igen gør sit indtog, så skal vi selvfølgelig også kode denne funktionalitet i vores spil.
+
+At kode denne tyngdekraftsfunktionalitet er dog heldigvis super nemt vhja. KAPLAY's <code>setGravity()</code> metode.
+
+Åbn derfor først din "gameScene.js" fil, og kald som det første inde mellem din "gameScene" funktions "tuborgklammer" denne funktion med en værdi i dens parameter sat til 400.
+
+Koden skal altså være:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+}
+```
+
+Mere skal der ikke til for at vores spil nu også vil blive påvirket af en tyngdekraft!
+
+##### Tilføje vores baggrundsbillede
+Heldigvis har vi jo tidligere prøvet at tilføje vores baggrundsbillede til en scene.
+
+Så gentag derfor blot denne proces, således at vores "gameScene.js" kode nu vil være:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+}
+```
+
+##### Tilføje vores Flappy bird
+At tilføje vores Flappy Bird og håndtere et normalt 'Flappy Bird' spils funktionalitet er imidlertid lidt mere omfattende.
+
+Derfor vil vi bryde processen for tilføjelse af vores Flappy Bird ned i følgende steps:
+
+1. Tilføje en 'Flappy Bird'
+2. Håndtere "jump" funktionalitet ved tast på 'space'
+3. Håndtere kollision af Flappy Bird og rør
+4. Håndtere når Flappy Bird er "faldet ud af" skærmen
+
+###### Tilføje en 'Flappy Bird'
+At tilføje en 'Flappy Bird' vil næsten være det sværeste af de 4 steps, da vi i denne proces skal anvende en masse "Components", når vi tilføjer vores Flappy Bird "Game Object" til skærmen via <code>add()</code> funktionen vi tidligere har brugt flere gange.
+
+De "Components" vi vil tilføje vores "Flappy Bird" i en konstant variabel kaldet "bird" er følgende, hvilke forklares kort nedenunder:
+
+- sprite()
+- pos()
+- anchor()
+- scale()
+- area()
+- body()
+- offscreen()
+
