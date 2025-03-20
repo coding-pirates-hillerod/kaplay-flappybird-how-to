@@ -731,7 +731,7 @@ export default function mainMenuScene() {
 }
 ```
 
-> _Læg i øvrigt mærke til, at der mellem hver komponent **SKAL** være et komma!!_
+> _Læg i øvrigt mærke til, at der mellem hver komponent **SKAL** være et komma efter slutparentesen!!!_
 
 ###### anchor()
 
@@ -759,3 +759,36 @@ export default function mainMenuScene() {
 Og kigger på nu igen i din browser, så vil vi vores spils titel heldigvis står pænt centreret på x-aksen.
 
 <img width="753" alt="Screenshot 2025-03-20 at 14 15 13" src="https://github.com/user-attachments/assets/a1a7665b-5763-4e0f-a01a-95f92cc60659" />
+
+> _"Ps.": De røde prikker du ser på de to foregående billeder skyldes blot, at der her er brugt KAPLAY's 'debug' feature til at vise, hvordan spillets titel bedre og pænere centreres på x-aksen_
+
+##### Tilføje en undertitel
+
+Nu hvor vi har vores titel, så vi vil på stort set samme måde tilføje en "undertitel" som fortæller brugeren/spilleren af spillet, hvad de skal trykke for at starte spillet.
+
+Til dette laver vi derfor først en konstant variabel kaldet "subtitle" under vores "title" variabel i koden, hvor vi bruger de 3 samme komponenter som før, med kun disse ændringer for hhv. <code>text()</code> og <code>pos()</code> komponenterne:
+
+- text("Press space to play", {size: 18})
+- pos(center())
+
+Dette gør blot teksten for vores "undertitel" lidt mindre end titlen, og placerer denne midt på skærmen uden at fratrække de 100 pixels på y-aksen.
+
+Med tilføjelsen af vores undertitel, bliver vores kode i "mainMenuScene.js" derfor følgende:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([
+    text("Flappy Bird"),
+    pos(center().x, center().y - 100),
+    anchor("center"),
+  ]);
+  const subTitle = add([
+    text("Press space to play..", { size: 18 }),
+    pos(center()),
+    anchor("center"),
+  ]);
+}
+```
+
+Og vores "Main Menu" scene vil nu så ud som følger i din browser:
