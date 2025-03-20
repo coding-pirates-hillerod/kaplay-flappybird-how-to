@@ -517,3 +517,33 @@ Som sagt vil vores næste scene, dvs. "Game" scenen hvori selve Flappy Bird spil
 Lav en ny fil kaldet "gameScene.js" under din "scenes" mappe.
 
 <img width="973" alt="Screenshot 2025-03-20 at 11 17 38" src="https://github.com/user-attachments/assets/144c46e5-9205-49ca-9cf7-6b3c1b077a66" />
+
+Eksport i din "gameScene.js" fil en funktion kaldet "gameScene". Koden skal være følgende:
+
+```javascript
+export default function gameScene() {}
+```
+
+Importer dernæst denne funktion i din "main.js" fil, lige under den import du lavede for din "mainMenuScene". Koden i toppen af "main.js" filen skal derfor nu se ud som følger:
+
+```javascript
+import kaplay from "kaplay";
+import "kaplay/global";
+
+import mainMenuScene from "./scenes/mainMenuScene";
+import gameScene from "./scenes/gameScene";
+```
+
+Brug til allersidst i "main.js" endnu en <code>scene()</code> metode og giv den navnet "game", samt en reference til din netop importerede <code>gameScene</code> funktion. Koden i bunden af "main.js" skal altså nu være:
+
+```javascript
+scene("main-menu", mainMenuScene);
+scene("game", gameScene);
+```
+
+##### Game Over scenen
+
+For "Game Over" scenen er processen den samme. Altså:
+
+Skab en ny fil kaldet "gameOverScene.js" i din "scenes" mappe.
+
