@@ -516,3 +516,4 @@ Som sagt vil vores næste scene, dvs. "Game" scenen hvori selve Flappy Bird spil
 
 Lav en ny fil kaldet "gameScene.js" under din "scenes" mappe.
 
+<img width="973" alt="Screenshot 2025-03-20 at 11 17 38" src="https://github.com/user-attachments/assets/144c46e5-9205-49ca-9cf7-6b3c1b077a66" />
