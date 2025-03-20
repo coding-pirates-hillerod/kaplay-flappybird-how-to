@@ -794,3 +794,37 @@ export default function mainMenuScene() {
 Og vores "Main Menu" scene vil nu så ud som følger i din browser:
 
 <img width="753" alt="Screenshot 2025-03-20 at 15 33 26" src="https://github.com/user-attachments/assets/0a0416e2-89c8-4549-9ac5-a1ed3ca3bba4" />
+
+##### Tjekke for tryk på "space", og gå til næste scene
+
+Eneste vi nu mangler at implementere i koden i vores "mainMenuScene.js" fil er at tjekke for, når spilleren trykker på sit keyboards <code>space</code> tast, hvorved spilleren skal føres videre til næste scene (her "game" scenen) og spillet dermed starte.
+
+Heldigvis er dette meget nemt at kode vhja. KAPLAY's <code>onKeyPress()</code> metode, da denne blot tager følgende parametre:
+
+1. Keyboardtasten vi vil tjekke for tryk på
+2. En (anonym) funktion til at handle på dette tryk
+
+Så under al vores nuværende kode kan vi derfor blot bruge denne funktion til at tjekke for tast på "<code>space</code>", og med en anonym funktion bruge KAPLAY's <code>go()</code> metode til at gå til vores "game" scene. Med det ville koden være:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([
+    text("Flappy Bird"),
+    pos(center().x, center().y - 100),
+    anchor("center"),
+  ]);
+  const subTitle = add([
+    text("Press space to play..", { size: 18 }),
+    pos(center()),
+    anchor("center"),
+  ]);
+
+  onKeyPress("space", () => {
+    go("game");
+  });
+}
+```
+
+Så hvis man nu først står i vores "Main Menu" scene i ens browser, deri trykker på ens "space" tast, så føres man altså nu videre til "Game" scene, hvor vi som det næste skal kode selve Flappy Bird spillet.
+
