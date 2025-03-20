@@ -413,5 +413,23 @@ Når vi trykker på "New File", så vil der i venstre side af VS Code, under vor
 
 <img width="851" alt="Screenshot 2025-03-20 at 09 35 47" src="https://github.com/user-attachments/assets/c6148167-7dc0-4132-800f-50e10699ec3e" />
 
+Nu hvor vi har filen til vores "Main Menu" scene (som i øvrigt også er en <code>JavaScript</code> fil), og denne jo automatisk er åbnet i vores editor, så kan vi begynde at skrive en form for generel kode til denne scene.
 
+Og måden vi her vil skabe denne scene er overordnet set at skrive en generel JavaScript <code>funktion</code>, som vi derefter kan importere i vores "main.js" fil og bruge i KAPLAY's <code>scene()</code>.
 
+Helt konkret er koden følgende (hvis elementer kort forklares herunder):
+
+```javascript
+export default function mainMenuScene() {
+    
+}
+```
+
+###### export default
+<code>export default</code> i koden er det man i JavaScript kalder nogle <code>keywords</code> som gør, at vi om lidt kan importere hele filens kode i vores "main.js" fil.
+
+###### function
+<code>function</code> er ligeledes et JavaScript <code>keyword</code> som man bruger til at definere en funktion - en funktion er overordnet set noget kode, som man kan bruge igen og igen i sin kode.
+
+###### mainMenuScene() {}
+<code>mainMenuScene</code> er som sådan blot det navn vi giver vores funktion (vi kunne i princippet have kaldt vores funktion hvad som helst), mens parenteserne (<code>()</code>) kan bruges til at give ens funktion nogle parametre (hvilket vi **ikke** gør her), og "tuborgklammerne" (<code>{}</code>) bruges til at skrive sin funktions kode mellem disse.
