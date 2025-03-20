@@ -547,3 +547,4 @@ For "Game Over" scenen er processen den samme. Altså:
 
 Skab en ny fil kaldet "gameOverScene.js" i din "scenes" mappe.
 
+<img width="973" alt="Screenshot 2025-03-20 at 11 29 29" src="https://github.com/user-attachments/assets/6147d126-9350-4273-ad3f-c155166c4ac0" />
