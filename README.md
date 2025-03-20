@@ -792,3 +792,5 @@ export default function mainMenuScene() {
 ```
 
 Og vores "Main Menu" scene vil nu så ud som følger i din browser:
+
+<img width="753" alt="Screenshot 2025-03-20 at 15 33 26" src="https://github.com/user-attachments/assets/0a0416e2-89c8-4549-9ac5-a1ed3ca3bba4" />
