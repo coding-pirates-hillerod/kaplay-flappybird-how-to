@@ -387,7 +387,7 @@ I det følgende vil vi derfor umiddelbart sætte disse 3 scener til spillet op, 
 
 Inden vi gør det, så vil vi dog lige lave en mappe til vores scener - som vi vil kalde "scenes" og ligger den under "src" mappen - således at vores kode er bedre struktureret og dermed nemmere at forstå (også for os selv 😅).
 
-##### "scenes" mappe
+##### "scenes" mappe til vores scener
 For at lave en "scenes" skal vi blot gøre følgende i VS code.
 
 Højreklik først på "src" mappen, og tryk derefter på "New Folder" i popup-menuen.
@@ -396,6 +396,7 @@ Højreklik først på "src" mappen, og tryk derefter på "New Folder" i popup-me
 
 Med det vil der under "src" mappen dukker en ny mappe op under denne, i hvilken vi skriver "scenes" (og trykker 'enter' for navngive mappen dette navn).
 
+<img width="851" alt="Screenshot 2025-03-20 at 07 52 16" src="https://github.com/user-attachments/assets/33a54327-a165-4fdd-9051-5c4b32036568" />
 
 
 ##### Main Menu scenen
