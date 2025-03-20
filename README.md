@@ -613,5 +613,6 @@ Og .. "HELL YEAH!" vi har nu sat alle vores scener op, og kan derfor (endelig..)
 
 Hvis du tjekker dit nuværende spil i din browser, så vil du for nu blot se en kedelig sort skærm (hvilket jo er knap så spændende ..).
 
+<img width="753" alt="Screenshot 2025-03-20 at 11 53 04" src="https://github.com/user-attachments/assets/569f8a60-a235-4e5b-b25d-82bf2f6ee66b" />
 
 
