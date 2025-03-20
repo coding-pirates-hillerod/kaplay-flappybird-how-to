@@ -606,3 +606,12 @@ scene("game-over", gameOverScene);
 
 go("main-menu");
 ```
+
+Og .. "HELL YEAH!" vi har nu sat alle vores scener op, og kan derfor (endelig..) gå i gang med at kode vores "Main Menu" scene!
+
+#### Kodning af "Main Menu" scene
+
+Hvis du tjekker dit nuværende spil i din browser, så vil du for nu blot se en kedelig sort skærm (hvilket jo er knap så spændende ..).
+
+
+
