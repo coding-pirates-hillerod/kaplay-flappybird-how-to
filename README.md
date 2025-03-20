@@ -392,5 +392,7 @@ For at lave en "scenes" skal vi blot gøre følgende i VS code.
 
 Højreklik først på "src" mappen, og tryk derefter på "New Folder" i popup-menuen.
 
+<img width="851" alt="Screenshot 2025-03-20 at 07 49 38" src="https://github.com/user-attachments/assets/668da908-b78b-47df-9b62-35e7630f2545" />
+
 
 ##### Main Menu scenen
