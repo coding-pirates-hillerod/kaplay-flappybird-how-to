@@ -758,3 +758,4 @@ export default function mainMenuScene() {
 
 Og kigger på nu igen i din browser, så vil vi vores spils titel heldigvis står pænt centreret på x-aksen.
 
+<img width="753" alt="Screenshot 2025-03-20 at 14 15 13" src="https://github.com/user-attachments/assets/a1a7665b-5763-4e0f-a01a-95f92cc60659" />
