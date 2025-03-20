@@ -734,6 +734,27 @@ export default function mainMenuScene() {
 > _Læg i øvrigt mærke til, at der mellem hver komponent **SKAL** være et komma!!_
 
 ###### anchor()
+
 Hvis du lige nu og her kigger på vores "Main Menu" i din browser, så vil du se, at vores netop tilføjede titel lader til at stå lidt forkert ..
 
 <img width="753" alt="Screenshot 2025-03-20 at 14 00 06" src="https://github.com/user-attachments/assets/88190202-dd1c-47c8-ac8c-d031d73a5e43" />
+
+Men som ovenstående billede forhåbentlig viser, så skyldes denne "fejl", at vores title placeres fra dets øverste venstre hjørne med den <code>pos()</code> vi netop har defineret.
+
+Dette kan vi imidlertid nemt ændre ved at tilføje en <code>anchor()</code> komponent til vores titel "Game Object", og mellem dets parenteser give den teksten <code>"center</code>.
+
+Med det er vores kode i "mainMenuScene.js" filen nu:
+
+```javascript
+export default function mainMenuScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([
+    text("Flappy Bird"),
+    pos(center().x, center().y - 100),
+    anchor("center"),
+  ]);
+}
+```
+
+Og kigger på nu igen i din browser, så vil vi vores spils titel heldigvis står pænt centreret på x-aksen.
+
