@@ -1608,4 +1608,4 @@ Med alt dette skulle du nu have dit eget  fuldt ud virkende 'Flappy Bird' spil .
 
 ## Bidrag
 Denne guide er skabt med bidrag af:
-- [Jonas Bak Phillipson](https://github.com/jbakchr)(_Formand og Kaptajn for Coding Pirates Hillerød_)
+- [Jonas Bak Phillipson](https://github.com/jbakchr) (_Formand og Kaptajn for Coding Pirates Hillerød_)
