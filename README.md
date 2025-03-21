@@ -1517,3 +1517,4 @@ export default function gameScene() {
 
 Og med dét er vores kodning af spillets "Game" scene nu færdigt, og denne scene skulle gerne se (nogenlunde) ud som følger:
 
+<img width="861" alt="Screenshot 2025-03-21 at 11 21 20" src="https://github.com/user-attachments/assets/9e6e6523-bb9f-484c-8f49-a531c9194924" />
