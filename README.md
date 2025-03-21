@@ -2,7 +2,9 @@
 
 Dette repo gennemgår, hvordan man koder sit eget 'Flappy Bird' spil i VS Code fra start til slut med Node.js og spilbiblioteket [KAPLAY](https://kaplayjs.com/).
 
-Ved at følge denne 'how-to' guide vil du således ende ud med at have kodet dit helt eget Flappy Bird spil.
+Ved at følge denne 'how-to' guide vil du således ende ud med at have kodet dit helt eget Flappy Bird spil ligesom det der her vises i nedenstående demo.
+
+https://github.com/user-attachments/assets/dee5c868-99a6-48c6-a6bf-eb6859dbd354
 
 ## Nødvendigt software
 
