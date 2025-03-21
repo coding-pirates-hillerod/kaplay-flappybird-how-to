@@ -1105,3 +1105,413 @@ export default function gameScene() {
 ```
 
 ##### Tilføje spillets ('top' og 'bottom') rør
+
+For at tilføje de klassiske rør i et Flappy Bird vil skrive en funktion til at hjælpe os med det, som vi så vil først kalder én gang uden for funktionen, og med et vist tidsinterval kalde samme kontinuerligt inden i funktionen (hvilket man kalder "rekursive" kald til en funktion).
+
+Overordnet set vil tlføjelsen af rør således følgde disse steps:
+
+1. Definer funktion
+2. Kald funktion
+3. implementer konstant tilføjelse af rør i funktionen
+
+###### Definer funktion
+
+At definere den funktion, som kontinuerligt vil skabe spillets rør, er let nok.
+
+For her vil vi bare lave en konstant variabel, kaldet "spawnPipes", og umiddelbart sætte den lig med en tom <code>arrow function</code>.
+
+Definitionen af denne funktion bliver derfor bare:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {};
+}
+```
+
+###### Kald funktion
+
+At kalde denne ny "spawnPipes()" funktion er også let.
+
+For under selve funktionen laver vi således bare et kald til denne på denne måde:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {};
+
+  spawnPipes();
+}
+```
+
+##### implementer konstant tilføjelse af rør i funktionen
+
+At implementere den konstante tilføjelse af spillet rør, inden mellem "tuborgklammerne" af vores "spawnPipes" funktion, er imdilertid lidt mere omfattende.
+
+Men for at gøre processen lidt mere overskuelig, så vil vi gribe dette an via disse steps:
+
+1. Få tilfældig y-koordinat for rør
+2. Tilføj 'toppipe'
+3. Tilføj 'bottompipe'
+4. Flyt rør ved update af spillet
+5. Tilføj nye rør hvert 5 sekund
+
+###### Få tilfældig y-koordinat for rør
+
+Grunden til at vi først vil skabe en tilfældig y-koordinat er, at vores rør jo gerne skal komme ind på skærmen i forskellige højder, ligesom de i et klassisk Flappy Bird spil.
+
+At få en tilfældig y-koordinat er dog heldigvis nemt vhja. KAPLAY's <code>rand()</code> funktion, for hvilken vi blot vil give dennes parametre værdierne <code>-300</code> og <code>-200</code>, således at højden på et rørs placering skiftes tilfældigt.
+
+Så derfor laver vi blot en variabel kaldet "randomY", og sætter denne lig med et kald som ovenfor beskrevet. Dvs.:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {
+    const randomY = rand(-300, -200);
+  };
+
+  spawnPipes();
+}
+```
+
+###### Tilføj 'toppipe'
+
+Tilføjelse af spillets øverste rør foregår på normal vis ved at tilføje dette med <code>add()</code>, hvori vil definere følgende komponenter:
+
+- sprite()
+- pos()
+- area()
+- et tag (som bare er en tekststreng)
+
+###### sprite()
+
+I <code>sprite()</code> komponenten angiver vi bare denne til vores tidligere loaded "toppipe".
+
+###### pos()
+
+For <code>pos()</code> komponenten angiver vi bare x-koordinaten til at være lig med skærmens bredde vhja. KAPLAY's <code>width()</code> funktion, og y-koordinaten til vores "randomY" variabel.
+
+###### area()
+
+<code>aread()</code> tilføjer vi bare uden parametre.
+
+###### et tag
+
+Som 'tag' til vores rør - dvs. både 'top' og 'bottom' - tildeler vi bare tekststrengen <code>"pipe"</code>
+
+Koden til vores 'toppipe' bliver altså:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {
+    const randomY = rand(-300, -200);
+    const topPipe = add([
+      sprite("toppipe"),
+      pos(width(), randomY),
+      area(),
+      "pipe",
+    ]);
+  };
+
+  spawnPipes();
+}
+```
+
+###### Tilføj 'bottompipe'
+
+Tilføjelsen af 'bottompipe' er stort set den samme som ovenstående.
+
+Eneste ændringer af <code>sprite()</code> og <code>pos()</code> komponenterne er følgende.
+
+###### sprite()
+
+<code>sprite()</code> gives teksten <code>"bottompipe"</code> som reference til vores tidligere loaded sprite.
+
+###### pos()
+
+<code>pos()</code> komponentens x-koordinat sættes igen til <code>width()</code>, mens y-koordination sættes til y-koordinaten af 'toppipe' plus dennes højde plus 100 pixels for at skabe mellemrummet mellem rørerne.
+
+Koden for 'bottompipe' er derfor:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {
+    const randomY = rand(-300, -200);
+    const topPipe = add([
+      sprite("toppipe"),
+      pos(width(), randomY),
+      area(),
+      "pipe",
+    ]);
+    const bottomPipe = add([
+      sprite("bottompipe"),
+      pos(width(), topPipe.pos.y + topPipe.height + 100),
+      area(),
+      "pipe",
+    ]);
+  };
+
+  spawnPipes();
+}
+```
+
+###### Flyt rør ved update af spillet
+
+På nuværende tispunkt tilføjer vi altså kun ét 'top' og 'bottom' helt ude til højre i skærmen, således at disse ikke kan ses.
+
+Imidlertid vil vi jo gerne have disse til kontinuerligt at flytte sig til venstre hen over skærmen, således at vores Flappy Bird kan prøve at 'flyve' igennem disse.
+
+Måden vi får det til at ske, er heldigvis ganske simpel ved at bruge vhja. <code>onUpdate()</code> metoden på begge rør, og så inde i denne funktion flytte hvert rør med <code>-50</code> på x-aksen for begge rør vhja. <code>move()</code> metoden.
+
+Koden for at flytte rørerne er derfor:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {
+    const randomY = rand(-300, -200);
+    const topPipe = add([
+      sprite("toppipe"),
+      pos(width(), randomY),
+      area(),
+      "pipe",
+    ]);
+    const bottomPipe = add([
+      sprite("bottompipe"),
+      pos(width(), topPipe.pos.y + topPipe.height + 100),
+      area(),
+      "pipe",
+    ]);
+
+    topPipe.onUpdate(() => {
+      topPipe.move(-50, 0);
+    });
+    bottomPipe.onUpdate(() => {
+      bottomPipe.move(-50, 0);
+    });
+  };
+
+  spawnPipes();
+}
+```
+
+###### Tilføj nye rør hvert 5 sekund
+
+Med den konstante bevægelse af hvert rør, så mangler faktisk nu kun at kalde vores "spawnPipes" funktion hvert 5 sekund, således at nye rør skabes, der ligeledes vil bevæge sig hen over skærmen.
+
+Heldigvis kan vi også nemt kode dette vhja. KAPLAY's <code>wait()</code> funktion, da man skal give denne en første parameter for hvor ofte en funktion skal eksekeveres, og som anden parameter den funktion som skal eksekveres.
+
+I vores tilfældes giver vi således blot denne funktion tallet <code>5</code> som første parameter, og dernæst en reference til vores <code>spawnPipes</code> som anden parameter.
+
+Vores kode bliver altså følgende:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+
+  const spawnPipes = () => {
+    const randomY = rand(-300, -200);
+    const topPipe = add([
+      sprite("toppipe"),
+      pos(width(), randomY),
+      area(),
+      "pipe",
+    ]);
+    const bottomPipe = add([
+      sprite("bottompipe"),
+      pos(width(), topPipe.pos.y + topPipe.height + 100),
+      area(),
+      "pipe",
+    ]);
+
+    topPipe.onUpdate(() => {
+      topPipe.move(-50, 0);
+    });
+    bottomPipe.onUpdate(() => {
+      bottomPipe.move(-50, 0);
+    });
+
+    wait(5, spawnPipes);
+  };
+
+  spawnPipes();
+}
+```
+
