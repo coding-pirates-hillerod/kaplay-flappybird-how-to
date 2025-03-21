@@ -1518,3 +1518,88 @@ export default function gameScene() {
 Og med dét er vores kodning af spillets "Game" scene nu færdigt, og denne scene skulle gerne se (nogenlunde) ud som følger:
 
 <img width="861" alt="Screenshot 2025-03-21 at 11 21 20" src="https://github.com/user-attachments/assets/9e6e6523-bb9f-484c-8f49-a531c9194924" />
+
+#### Kodning af "Game Over" scene
+
+Yaaiii .. Nu mangler vi kun at kode vores "Game Over scene, og så er alt færdigt!!
+
+Så åbn din "gameOverScene.js" fil, hvori vi vil kode denne scene efter disse steps:
+
+1. Tilføj baggrundsbillede
+2. Tilføj "Game Over" titel
+3. Tilføj "Press space to play again .." undertitel
+4. Håndtere tast på "space" for igen at spille spillet
+
+##### Tilføj baggrundsbillede
+
+Tilføjelsen af baggrundsbilledet har vi allerede gjort flere gange .. så koden er blot:
+
+```javascript
+export default function gameOverScene() {
+  const bg = add([sprite("bg")]);
+}
+```
+
+##### Tilføj "Game Over" titel
+
+I vores "mainMenuScene.js" fil tilføjede vi her tidligere en titel til denne scene.
+
+Og her vil vi blot bruge samme kode - med lidt få ændringer som er:
+
+```javascript
+export default function gameOverScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([
+    text("Game Over"),
+    pos(center().x, center().y - 100),
+    anchor("center"),
+  ]);
+}
+```
+
+##### Tilføj "Press space to play again .." undertitel
+
+At tilføje en undertitel med teksten "Press space to play again .." gøres også på samme måde som tidligere - her, igen, med nogle få ændringer:
+
+```javascript
+export default function gameOverScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([
+    text("Game Over"),
+    pos(center().x, center().y - 100),
+    anchor("center"),
+  ]);
+  const subTitle = add([
+    text("Press space to play again ..", { size: 18 }),
+    pos(center()),
+    anchor("center"),
+  ]);
+}
+```
+
+#### Håndtere tast på "space" for igen at spille spillet
+
+Håndtering af tast på "space" for igen at spille spillet er totalt lig den fra vores "mainMenuScene.js" scene, hvorfor vi bare kan kopiere <code>onKeyPress()</code> funktionen og dens kode ind i vores "gameOverScene.js":
+
+```javascript
+export default function gameOverScene() {
+  const bg = add([sprite("bg")]);
+  const title = add([
+    text("Game Over"),
+    pos(center().x, center().y - 100),
+    anchor("center"),
+  ]);
+  const subTitle = add([
+    text("Press space to play again ..", { size: 18 }),
+    pos(center()),
+    anchor("center"),
+  ]);
+
+  onKeyPress("space", () => {
+    go("game");
+  });
+}
+```
+
+## The End .. !
+Med alt dette skulle du nu have dit eget  fuldt ud virkende 'Flappy Bird' spil .. godt gået, hvis du er nået her til!
