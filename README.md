@@ -831,6 +831,7 @@ Så hvis man nu først står i vores "Main Menu" scene i ens browser, deri trykk
 <img width="1496" alt="Screenshot 2025-03-20 at 19 45 54" src="https://github.com/user-attachments/assets/1d905a30-65c7-41b7-bbdf-a21ff23d0d02" />
 
 #### Kodning af "Game" scene
+
 Huuurraahhh .. endelig er vi nået til at skulle kode selve vores Flappy Bird spil!
 
 Og i den forbindelse vil processen for vores kodning af selv spillet overordnet set være følgende:
@@ -841,6 +842,7 @@ Og i den forbindelse vil processen for vores kodning af selv spillet overordnet 
 4. Tilføje spillets ('top' og 'bottom') rør
 
 ##### Definere en 'tyngdekraft' for spillet
+
 Da et Flappy Bird spil jo primært handler om at en fugl konstant bliver trukket nedad af tyngdekraften, og kun ved tryk på en tast flyver opad indtil tyngdekraften igen gør sit indtog, så skal vi selvfølgelig også kode denne funktionalitet i vores spil.
 
 At kode denne tyngdekraftsfunktionalitet er dog heldigvis super nemt vhja. KAPLAY's <code>setGravity()</code> metode.
@@ -858,6 +860,7 @@ export default function gameScene() {
 Mere skal der ikke til for at vores spil nu også vil blive påvirket af en tyngdekraft!
 
 ##### Tilføje vores baggrundsbillede
+
 Heldigvis har vi jo tidligere prøvet at tilføje vores baggrundsbillede til en scene.
 
 Så gentag derfor blot denne proces, således at vores "gameScene.js" kode nu vil være:
@@ -871,6 +874,7 @@ export default function gameScene() {
 ```
 
 ##### Tilføje vores Flappy bird
+
 At tilføje vores Flappy Bird og håndtere et normalt 'Flappy Bird' spils funktionalitet er imidlertid lidt mere omfattende.
 
 Derfor vil vi bryde processen for tilføjelse af vores Flappy Bird ned i følgende steps:
@@ -881,9 +885,10 @@ Derfor vil vi bryde processen for tilføjelse af vores Flappy Bird ned i følgen
 4. Håndtere når Flappy Bird er "faldet ud af" skærmen
 
 ###### Tilføje en 'Flappy Bird'
+
 At tilføje en 'Flappy Bird' vil næsten være det sværeste af de 4 steps, da vi i denne proces skal anvende en masse "Components", når vi tilføjer vores Flappy Bird "Game Object" til skærmen via <code>add()</code> funktionen vi tidligere har brugt flere gange.
 
-De "Components" vi vil tilføje vores "Flappy Bird" i en konstant variabel kaldet "bird" er følgende, hvilke forklares kort nedenunder:
+De "Components" vi vil tilføje vores "Flappy Bird" i en konstant variabel kaldet "bird" er følgende, hvilke kort forklares nedenunder med de parametre som hver skal gives:
 
 - sprite()
 - pos()
@@ -893,3 +898,210 @@ De "Components" vi vil tilføje vores "Flappy Bird" i en konstant variabel kalde
 - body()
 - offscreen()
 
+###### sprite()
+
+<code>sprite()</code> komponenten har vi allerede brugt tidligere, og med den angiver vi blot, hvilket billede vi vil bruge til vores "Game Obejct". Til at vise vores tidligere loaded Flappy Bird billede giver vi derfor blot funktionen teksten <code>"bird"</code>.
+
+###### pos()
+
+<code>pos()</code> placerer vores Game Object et sted på skærmen efter den x og y koordinat man giver som parametre. Her sætter vi blot x koordinaten til <code>30</code>, og y koordinaten til <code>center().y</code>, så vores Flappy Bird vil placere midt på skærmen, lidt til højre fra dets venstre side.
+
+###### anchor()
+
+<code>anchor()</code> sætter vi blot ligesom tidligere til <code>"center"</code>.
+
+###### scale()
+
+<code>scale()</code> komponenten bruges til at gøre ens billeder enten større eller mindre på skærmen.
+
+Her sætter vi denne til en værdi af <code>0.8</code>, således at vores Flappy Bird vil fylde lidt mindre på skærmen end billedets normale størrelse (en værdi under 1 gør ens billede mindre, mens en værdi større end 1 gør det større).
+
+###### area()
+
+Med <code>area()</code> komponenten muliggør man, at ens Game Object - her vores Flappy Bird - vil kunne detektere kollision med andre Game Obejcts.
+
+Til denne angiver vi her ingen parametre.
+
+###### body()
+
+<code>body()</code> komponenten vil medvirke, at vores Flappy Bird vil blive påvirket af den tyngdekraft vi tidligere satte.
+
+Til denne komponent vil vi give den et JavaScript objekt (<code>{}</code>) med en <code>jumpForce</code> property sat til en value af <code>140</code> i dens parameter, således at vores Flappy Bird vil "hoppe opad", når man senere kalder dens <code>jump()</code> metode.
+
+###### offscreen()
+
+<code>offscreen()</code> komponenten vil medføre, at vi kan detekterer, når vores Flappy Bird på den ene eller anden måde flyver ud af skærmen, hvorved man så er "game over", og vi derfor vil føre spilleren videre til vores "Game Over" scene.
+
+Med alle disse komponenter sat ved tilføjelse af vores Flappy Bird, så bliver den fulde kode for dette følgende:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+}
+```
+
+##### Håndtere "jump" funktionalitet ved tast på 'space'
+
+Hvis du kigger på dit spil i din browser lige nu, så vil du se, at din Flappy Bird bare falder ud af skærmen, når din "Game" scene startes.
+
+Vi mangler altså at kunne få vores Flappy Bird til at hoppe, når en spiller trykker på sin <code>space</code> tast.
+
+Men dette er heldigvis nemt at implementere for vores Flappy Bird Game Object, da vi ligesom tidligere bare kan gøre brug af en <code>onKeyPress()</code> metode på vores fugl.
+
+I den forbindelse skal vi således bare sætte denne metodes første parameter til <code>"space"</code>, og dens anden parameter til en anonym funktion. Den umiddelbare kode vil altså være:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {});
+}
+```
+
+Og inde mellem den anynome funktions "tuborgklammer" skal vi bare kalde <code>jump()</code> metoden på vores <code>bird</code> variabel for at vores Flappy Bird til at hoppe lidt opad, når spilleren trykker på sin <code>space</code> tast.
+
+Den færdige kode bliver altså:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+}
+```
+
+##### Håndtere kollision af Flappy Bird og rør
+
+Godt nok har vi ikke tilføjet nogle af de klassiske Flappy Bird rør til vores spil endnu. Men heldigvis er det ret så nemt at sætte at sætte vores Flappy Bird op til at registrerer kollision med sådanne rør via en <code>onCollide()</code> metode.
+
+Denne skal vi bare kalde på vores <code>bird</code> variabel, og bruge teksten <code>"pipe"</code> som første parameter, og en anonym funktion som anden parameter. Dvs. umiddelbart sådan her:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {});
+}
+```
+
+Og når vores Flappy Bird rammer et rør, så skal vi bare kalde <code>go()</code> funktionen inde mellem den anonyme funktions "tuborgklammer" med teksten <code>"game-over"</code>, således at vi går til vores "Game Over" scene.
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+}
+```
+
+##### Håndtere når Flappy Bird er "faldet ud af" skærmen
+
+At håndtere at ens Flappy Bird "falder ud af skærmen" er heldigvis også nemt, da vi også her bare skal gå til "Game Over" scenen, når det sker.
+
+I den forbindelse kan vi nemlig bare bruge <code>onExitScreen()</code> metoden på vores <code>bird</code> variabel, og via en anonym funktion som parameter bruge <code>go()</code> funktionen til at gå til "Game Over" scenen, når vores Flappy Bird falder ud af skærmen.
+
+Med det bliver vores kode altså:
+
+```javascript
+export default function gameScene() {
+  setGravity(400);
+
+  const bg = add([sprite("bg")]);
+
+  const bird = add([
+    sprite("bird"),
+    pos(30, center().y),
+    scale(0.8),
+    area(),
+    anchor("center"),
+    body({ jumpForce: 140 }),
+    offscreen(),
+  ]);
+
+  bird.onKeyPress("space", () => {
+    bird.jump();
+  });
+
+  bird.onCollide("pipe", () => {
+    go("game-over");
+  });
+
+  bird.onExitScreen(() => {
+    go("game-over");
+  });
+}
+```
+
+##### Tilføje spillets ('top' og 'bottom') rør
