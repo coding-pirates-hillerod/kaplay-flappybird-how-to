@@ -1605,3 +1605,7 @@ export default function gameOverScene() {
 
 ## The End .. !
 Med alt dette skulle du nu have dit eget  fuldt ud virkende 'Flappy Bird' spil .. godt gået, hvis du er nået her til!
+
+## Bidrag
+Denne guide er skabt med bidrag af:
+- [Jonas Bak Phillipson](https://github.com/jbakchr)(_Formand og Kaptajn for Coding Pirates Hillerød_)
