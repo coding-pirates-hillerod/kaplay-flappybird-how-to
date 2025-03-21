@@ -1515,3 +1515,5 @@ export default function gameScene() {
 }
 ```
 
+Og med dét er vores kodning af spillets "Game" scene nu færdigt, og denne scene skulle gerne se (nogenlunde) ud som følger:
+
